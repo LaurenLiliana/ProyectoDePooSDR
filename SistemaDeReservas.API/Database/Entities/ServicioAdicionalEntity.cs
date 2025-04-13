@@ -1,0 +1,25 @@
+﻿using SistemaDeReservas.API.Database.Entities.Common;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
+
+namespace SistemaDeReservas.API.Database.Entities
+{
+    [Table("servicio_adicional")]
+    public class ServicioAdicionalEntity : BaseEntity
+    {
+        [Column("nombre")]
+        [Required]
+        public string Nombre { get; set; }
+
+        [Column("descripcion")]
+        public string Descripción { get; set; }
+
+        [Column("precio")]
+        [Required]
+        public decimal Precio { get; set; }
+
+        [Column("disponible")]
+        [Required]
+        public bool Disponible { get; set; }
+    }
+}
