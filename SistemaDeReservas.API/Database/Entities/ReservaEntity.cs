@@ -13,7 +13,7 @@ namespace SistemaDeReservas.API.Database.Entities
 
         [Column("habitacion_id")]
         [Required]
-        public int HabitaciónId { get; set; }
+        public int HabitacionId { get; set; }
 
         [Column("FechaInicio")]
         [Required]
@@ -34,8 +34,8 @@ namespace SistemaDeReservas.API.Database.Entities
         [ForeignKey(nameof(ClienteId))]
         public virtual ClienteEntity Cliente { get; set; }
 
-        [ForeignKey(nameof(HabitaciónId))]
-        public virtual HabitacionEntity Habitación { get; set; }
+        [ForeignKey(nameof(HabitacionId))]
+        public virtual HabitacionEntity Habitacion { get; set; }
 
         public virtual ICollection<PagoEntity> Pagos { get; set; }
     }

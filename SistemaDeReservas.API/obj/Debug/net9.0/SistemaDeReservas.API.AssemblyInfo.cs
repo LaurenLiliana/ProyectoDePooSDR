@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SistemaDeReservas.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+294bfcf78307d481ebffcf52249caf1117f61ac4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ca8c18589259e144187290f23a92ff03ad23372c")]
 [assembly: System.Reflection.AssemblyProductAttribute("SistemaDeReservas.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SistemaDeReservas.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

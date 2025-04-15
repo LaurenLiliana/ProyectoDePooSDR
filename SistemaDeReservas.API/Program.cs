@@ -19,6 +19,7 @@ builder.Services.AddControllers();
 
 builder.Services.AddOpenApi();
 builder.Services.AddScoped<IHotelService, HotelService>();
+builder.Services.AddScoped<IHabitacionService, HabitacionService>();
 
 var app = builder.Build();
 

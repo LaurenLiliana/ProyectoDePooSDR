@@ -3,6 +3,50 @@
   "WorkspaceRootPath": "C:\\Users\\laure\\projects\\ProyectoPoo\\SistemaDeReservas.API\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{AEA9BC02-2868-4988-BC7C-E42FAA6F9FD8}|SistemaDeReservas.API\\SistemaDeReservas.API.csproj|c:\\users\\laure\\projects\\proyectopoo\\sistemadereservas.api\\sistemadereservas.api\\database\\entities\\reservaentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEA9BC02-2868-4988-BC7C-E42FAA6F9FD8}|SistemaDeReservas.API\\SistemaDeReservas.API.csproj|solutionrelative:sistemadereservas.api\\database\\entities\\reservaentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEA9BC02-2868-4988-BC7C-E42FAA6F9FD8}|SistemaDeReservas.API\\SistemaDeReservas.API.csproj|c:\\users\\laure\\projects\\proyectopoo\\sistemadereservas.api\\sistemadereservas.api\\database\\entities\\pagoentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEA9BC02-2868-4988-BC7C-E42FAA6F9FD8}|SistemaDeReservas.API\\SistemaDeReservas.API.csproj|solutionrelative:sistemadereservas.api\\database\\entities\\pagoentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEA9BC02-2868-4988-BC7C-E42FAA6F9FD8}|SistemaDeReservas.API\\SistemaDeReservas.API.csproj|c:\\users\\laure\\projects\\proyectopoo\\sistemadereservas.api\\sistemadereservas.api\\controllers\\habitacioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEA9BC02-2868-4988-BC7C-E42FAA6F9FD8}|SistemaDeReservas.API\\SistemaDeReservas.API.csproj|solutionrelative:sistemadereservas.api\\controllers\\habitacioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEA9BC02-2868-4988-BC7C-E42FAA6F9FD8}|SistemaDeReservas.API\\SistemaDeReservas.API.csproj|c:\\users\\laure\\projects\\proyectopoo\\sistemadereservas.api\\sistemadereservas.api\\dtos\\habitaciones\\habitacioneditdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEA9BC02-2868-4988-BC7C-E42FAA6F9FD8}|SistemaDeReservas.API\\SistemaDeReservas.API.csproj|solutionrelative:sistemadereservas.api\\dtos\\habitaciones\\habitacioneditdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEA9BC02-2868-4988-BC7C-E42FAA6F9FD8}|SistemaDeReservas.API\\SistemaDeReservas.API.csproj|c:\\users\\laure\\projects\\proyectopoo\\sistemadereservas.api\\sistemadereservas.api\\services\\habitacionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEA9BC02-2868-4988-BC7C-E42FAA6F9FD8}|SistemaDeReservas.API\\SistemaDeReservas.API.csproj|solutionrelative:sistemadereservas.api\\services\\habitacionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEA9BC02-2868-4988-BC7C-E42FAA6F9FD8}|SistemaDeReservas.API\\SistemaDeReservas.API.csproj|c:\\users\\laure\\projects\\proyectopoo\\sistemadereservas.api\\sistemadereservas.api\\dtos\\habitaciones\\habitacioncreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEA9BC02-2868-4988-BC7C-E42FAA6F9FD8}|SistemaDeReservas.API\\SistemaDeReservas.API.csproj|solutionrelative:sistemadereservas.api\\dtos\\habitaciones\\habitacioncreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEA9BC02-2868-4988-BC7C-E42FAA6F9FD8}|SistemaDeReservas.API\\SistemaDeReservas.API.csproj|c:\\users\\laure\\projects\\proyectopoo\\sistemadereservas.api\\sistemadereservas.api\\database\\entities\\habitacionentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEA9BC02-2868-4988-BC7C-E42FAA6F9FD8}|SistemaDeReservas.API\\SistemaDeReservas.API.csproj|solutionrelative:sistemadereservas.api\\database\\entities\\habitacionentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEA9BC02-2868-4988-BC7C-E42FAA6F9FD8}|SistemaDeReservas.API\\SistemaDeReservas.API.csproj|c:\\users\\laure\\projects\\proyectopoo\\sistemadereservas.api\\sistemadereservas.api\\database\\entities\\hotelentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEA9BC02-2868-4988-BC7C-E42FAA6F9FD8}|SistemaDeReservas.API\\SistemaDeReservas.API.csproj|solutionrelative:sistemadereservas.api\\database\\entities\\hotelentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEA9BC02-2868-4988-BC7C-E42FAA6F9FD8}|SistemaDeReservas.API\\SistemaDeReservas.API.csproj|c:\\users\\laure\\projects\\proyectopoo\\sistemadereservas.api\\sistemadereservas.api\\services\\interfaces\\ihabitacionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEA9BC02-2868-4988-BC7C-E42FAA6F9FD8}|SistemaDeReservas.API\\SistemaDeReservas.API.csproj|solutionrelative:sistemadereservas.api\\services\\interfaces\\ihabitacionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEA9BC02-2868-4988-BC7C-E42FAA6F9FD8}|SistemaDeReservas.API\\SistemaDeReservas.API.csproj|c:\\users\\laure\\projects\\proyectopoo\\sistemadereservas.api\\sistemadereservas.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEA9BC02-2868-4988-BC7C-E42FAA6F9FD8}|SistemaDeReservas.API\\SistemaDeReservas.API.csproj|solutionrelative:sistemadereservas.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEA9BC02-2868-4988-BC7C-E42FAA6F9FD8}|SistemaDeReservas.API\\SistemaDeReservas.API.csproj|c:\\users\\laure\\projects\\proyectopoo\\sistemadereservas.api\\sistemadereservas.api\\services\\hotelservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEA9BC02-2868-4988-BC7C-E42FAA6F9FD8}|SistemaDeReservas.API\\SistemaDeReservas.API.csproj|solutionrelative:sistemadereservas.api\\services\\hotelservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{AEA9BC02-2868-4988-BC7C-E42FAA6F9FD8}|SistemaDeReservas.API\\SistemaDeReservas.API.csproj|c:\\users\\laure\\projects\\proyectopoo\\sistemadereservas.api\\sistemadereservas.api\\database\\entities\\common\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AEA9BC02-2868-4988-BC7C-E42FAA6F9FD8}|SistemaDeReservas.API\\SistemaDeReservas.API.csproj|solutionrelative:sistemadereservas.api\\database\\entities\\common\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -17,14 +61,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{AEA9BC02-2868-4988-BC7C-E42FAA6F9FD8}|SistemaDeReservas.API\\SistemaDeReservas.API.csproj|c:\\users\\laure\\projects\\proyectopoo\\sistemadereservas.api\\sistemadereservas.api\\services\\interfaces\\ihotelservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AEA9BC02-2868-4988-BC7C-E42FAA6F9FD8}|SistemaDeReservas.API\\SistemaDeReservas.API.csproj|solutionrelative:sistemadereservas.api\\services\\interfaces\\ihotelservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AEA9BC02-2868-4988-BC7C-E42FAA6F9FD8}|SistemaDeReservas.API\\SistemaDeReservas.API.csproj|c:\\users\\laure\\projects\\proyectopoo\\sistemadereservas.api\\sistemadereservas.api\\services\\hotelservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AEA9BC02-2868-4988-BC7C-E42FAA6F9FD8}|SistemaDeReservas.API\\SistemaDeReservas.API.csproj|solutionrelative:sistemadereservas.api\\services\\hotelservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AEA9BC02-2868-4988-BC7C-E42FAA6F9FD8}|SistemaDeReservas.API\\SistemaDeReservas.API.csproj|c:\\users\\laure\\projects\\proyectopoo\\sistemadereservas.api\\sistemadereservas.api\\dtos\\habitaciones\\habitacioneditdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AEA9BC02-2868-4988-BC7C-E42FAA6F9FD8}|SistemaDeReservas.API\\SistemaDeReservas.API.csproj|solutionrelative:sistemadereservas.api\\dtos\\habitaciones\\habitacioneditdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AEA9BC02-2868-4988-BC7C-E42FAA6F9FD8}|SistemaDeReservas.API\\SistemaDeReservas.API.csproj|c:\\users\\laure\\projects\\proyectopoo\\sistemadereservas.api\\sistemadereservas.api\\dtos\\clientes\\clienteeditdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -55,16 +91,8 @@
       "RelativeMoniker": "D:0:0:{AEA9BC02-2868-4988-BC7C-E42FAA6F9FD8}|SistemaDeReservas.API\\SistemaDeReservas.API.csproj|solutionrelative:sistemadereservas.api\\dtos\\reservas\\reservacreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AEA9BC02-2868-4988-BC7C-E42FAA6F9FD8}|SistemaDeReservas.API\\SistemaDeReservas.API.csproj|c:\\users\\laure\\projects\\proyectopoo\\sistemadereservas.api\\sistemadereservas.api\\dtos\\habitaciones\\habitacioncreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AEA9BC02-2868-4988-BC7C-E42FAA6F9FD8}|SistemaDeReservas.API\\SistemaDeReservas.API.csproj|solutionrelative:sistemadereservas.api\\dtos\\habitaciones\\habitacioncreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{AEA9BC02-2868-4988-BC7C-E42FAA6F9FD8}|SistemaDeReservas.API\\SistemaDeReservas.API.csproj|c:\\users\\laure\\projects\\proyectopoo\\sistemadereservas.api\\sistemadereservas.api\\dtos\\pagos\\pagoactionresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AEA9BC02-2868-4988-BC7C-E42FAA6F9FD8}|SistemaDeReservas.API\\SistemaDeReservas.API.csproj|solutionrelative:sistemadereservas.api\\dtos\\pagos\\pagoactionresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AEA9BC02-2868-4988-BC7C-E42FAA6F9FD8}|SistemaDeReservas.API\\SistemaDeReservas.API.csproj|c:\\users\\laure\\projects\\proyectopoo\\sistemadereservas.api\\sistemadereservas.api\\database\\entities\\pagoentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AEA9BC02-2868-4988-BC7C-E42FAA6F9FD8}|SistemaDeReservas.API\\SistemaDeReservas.API.csproj|solutionrelative:sistemadereservas.api\\database\\entities\\pagoentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AEA9BC02-2868-4988-BC7C-E42FAA6F9FD8}|SistemaDeReservas.API\\SistemaDeReservas.API.csproj|c:\\users\\laure\\projects\\proyectopoo\\sistemadereservas.api\\sistemadereservas.api\\dtos\\reservas\\reservaactionresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -103,20 +131,8 @@
       "RelativeMoniker": "D:0:0:{AEA9BC02-2868-4988-BC7C-E42FAA6F9FD8}|SistemaDeReservas.API\\SistemaDeReservas.API.csproj|solutionrelative:sistemadereservas.api\\dtos\\habitaciones\\habitaciondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AEA9BC02-2868-4988-BC7C-E42FAA6F9FD8}|SistemaDeReservas.API\\SistemaDeReservas.API.csproj|c:\\users\\laure\\projects\\proyectopoo\\sistemadereservas.api\\sistemadereservas.api\\database\\entities\\hotelentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AEA9BC02-2868-4988-BC7C-E42FAA6F9FD8}|SistemaDeReservas.API\\SistemaDeReservas.API.csproj|solutionrelative:sistemadereservas.api\\database\\entities\\hotelentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{AEA9BC02-2868-4988-BC7C-E42FAA6F9FD8}|SistemaDeReservas.API\\SistemaDeReservas.API.csproj|c:\\users\\laure\\projects\\proyectopoo\\sistemadereservas.api\\sistemadereservas.api\\database\\entities\\servicioadicionalentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AEA9BC02-2868-4988-BC7C-E42FAA6F9FD8}|SistemaDeReservas.API\\SistemaDeReservas.API.csproj|solutionrelative:sistemadereservas.api\\database\\entities\\servicioadicionalentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AEA9BC02-2868-4988-BC7C-E42FAA6F9FD8}|SistemaDeReservas.API\\SistemaDeReservas.API.csproj|c:\\users\\laure\\projects\\proyectopoo\\sistemadereservas.api\\sistemadereservas.api\\database\\entities\\reservaentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AEA9BC02-2868-4988-BC7C-E42FAA6F9FD8}|SistemaDeReservas.API\\SistemaDeReservas.API.csproj|solutionrelative:sistemadereservas.api\\database\\entities\\reservaentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AEA9BC02-2868-4988-BC7C-E42FAA6F9FD8}|SistemaDeReservas.API\\SistemaDeReservas.API.csproj|c:\\users\\laure\\projects\\proyectopoo\\sistemadereservas.api\\sistemadereservas.api\\database\\entities\\habitacionentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AEA9BC02-2868-4988-BC7C-E42FAA6F9FD8}|SistemaDeReservas.API\\SistemaDeReservas.API.csproj|solutionrelative:sistemadereservas.api\\database\\entities\\habitacionentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AEA9BC02-2868-4988-BC7C-E42FAA6F9FD8}|SistemaDeReservas.API\\SistemaDeReservas.API.csproj|c:\\users\\laure\\projects\\proyectopoo\\sistemadereservas.api\\sistemadereservas.api\\database\\entities\\clienteentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -154,59 +170,150 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ResponseDto.cs",
-              "DocumentMoniker": "C:\\Users\\laure\\projects\\ProyectoPoo\\SistemaDeReservas.API\\SistemaDeReservas.API\\Dtos\\Common\\ResponseDto.cs",
-              "RelativeDocumentMoniker": "SistemaDeReservas.API\\Dtos\\Common\\ResponseDto.cs",
-              "ToolTip": "C:\\Users\\laure\\projects\\ProyectoPoo\\SistemaDeReservas.API\\SistemaDeReservas.API\\Dtos\\Common\\ResponseDto.cs",
-              "RelativeToolTip": "SistemaDeReservas.API\\Dtos\\Common\\ResponseDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "HabitacionController.cs",
+              "DocumentMoniker": "C:\\Users\\laure\\projects\\ProyectoPoo\\SistemaDeReservas.API\\SistemaDeReservas.API\\Controllers\\HabitacionController.cs",
+              "RelativeDocumentMoniker": "SistemaDeReservas.API\\Controllers\\HabitacionController.cs",
+              "ToolTip": "C:\\Users\\laure\\projects\\ProyectoPoo\\SistemaDeReservas.API\\SistemaDeReservas.API\\Controllers\\HabitacionController.cs",
+              "RelativeToolTip": "SistemaDeReservas.API\\Controllers\\HabitacionController.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAADwvzAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T23:31:01.35Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "IHotelService.cs",
-              "DocumentMoniker": "C:\\Users\\laure\\projects\\ProyectoPoo\\SistemaDeReservas.API\\SistemaDeReservas.API\\Services\\Interfaces\\IHotelService.cs",
-              "RelativeDocumentMoniker": "SistemaDeReservas.API\\Services\\Interfaces\\IHotelService.cs",
-              "ToolTip": "C:\\Users\\laure\\projects\\ProyectoPoo\\SistemaDeReservas.API\\SistemaDeReservas.API\\Services\\Interfaces\\IHotelService.cs",
-              "RelativeToolTip": "SistemaDeReservas.API\\Services\\Interfaces\\IHotelService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T23:27:15.284Z",
+              "WhenOpened": "2025-04-15T03:38:46.487Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "HabitacionService.cs",
+              "DocumentMoniker": "C:\\Users\\laure\\projects\\ProyectoPoo\\SistemaDeReservas.API\\SistemaDeReservas.API\\Services\\HabitacionService.cs",
+              "RelativeDocumentMoniker": "SistemaDeReservas.API\\Services\\HabitacionService.cs",
+              "ToolTip": "C:\\Users\\laure\\projects\\ProyectoPoo\\SistemaDeReservas.API\\SistemaDeReservas.API\\Services\\HabitacionService.cs",
+              "RelativeToolTip": "SistemaDeReservas.API\\Services\\HabitacionService.cs",
+              "ViewState": "AgIAAIAAAAAAAAAAAAAgwJUAAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-15T03:26:21.823Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "HabitacionEntity.cs",
+              "DocumentMoniker": "C:\\Users\\laure\\projects\\ProyectoPoo\\SistemaDeReservas.API\\SistemaDeReservas.API\\Database\\Entities\\HabitacionEntity.cs",
+              "RelativeDocumentMoniker": "SistemaDeReservas.API\\Database\\Entities\\HabitacionEntity.cs",
+              "ToolTip": "C:\\Users\\laure\\projects\\ProyectoPoo\\SistemaDeReservas.API\\SistemaDeReservas.API\\Database\\Entities\\HabitacionEntity.cs",
+              "RelativeToolTip": "SistemaDeReservas.API\\Database\\Entities\\HabitacionEntity.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-13T04:01:46.826Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "HabitacionCreateDto.cs",
+              "DocumentMoniker": "C:\\Users\\laure\\projects\\ProyectoPoo\\SistemaDeReservas.API\\SistemaDeReservas.API\\Dtos\\Habitaciones\\HabitacionCreateDto.cs",
+              "RelativeDocumentMoniker": "SistemaDeReservas.API\\Dtos\\Habitaciones\\HabitacionCreateDto.cs",
+              "ToolTip": "C:\\Users\\laure\\projects\\ProyectoPoo\\SistemaDeReservas.API\\SistemaDeReservas.API\\Dtos\\Habitaciones\\HabitacionCreateDto.cs",
+              "RelativeToolTip": "SistemaDeReservas.API\\Dtos\\Habitaciones\\HabitacionCreateDto.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwBgAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-13T05:47:20.143Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "HabitacionEditDto.cs",
+              "DocumentMoniker": "C:\\Users\\laure\\projects\\ProyectoPoo\\SistemaDeReservas.API\\SistemaDeReservas.API\\Dtos\\Habitaciones\\HabitacionEditDto.cs",
+              "RelativeDocumentMoniker": "SistemaDeReservas.API\\Dtos\\Habitaciones\\HabitacionEditDto.cs",
+              "ToolTip": "C:\\Users\\laure\\projects\\ProyectoPoo\\SistemaDeReservas.API\\SistemaDeReservas.API\\Dtos\\Habitaciones\\HabitacionEditDto.cs",
+              "RelativeToolTip": "SistemaDeReservas.API\\Dtos\\Habitaciones\\HabitacionEditDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-13T05:47:52.601Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PagoEntity.cs",
+              "DocumentMoniker": "C:\\Users\\laure\\projects\\ProyectoPoo\\SistemaDeReservas.API\\SistemaDeReservas.API\\Database\\Entities\\PagoEntity.cs",
+              "RelativeDocumentMoniker": "SistemaDeReservas.API\\Database\\Entities\\PagoEntity.cs",
+              "ToolTip": "C:\\Users\\laure\\projects\\ProyectoPoo\\SistemaDeReservas.API\\SistemaDeReservas.API\\Database\\Entities\\PagoEntity.cs",
+              "RelativeToolTip": "SistemaDeReservas.API\\Database\\Entities\\PagoEntity.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAYAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-13T04:03:28.149Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ReservaEntity.cs",
+              "DocumentMoniker": "C:\\Users\\laure\\projects\\ProyectoPoo\\SistemaDeReservas.API\\SistemaDeReservas.API\\Database\\Entities\\ReservaEntity.cs",
+              "RelativeDocumentMoniker": "SistemaDeReservas.API\\Database\\Entities\\ReservaEntity.cs",
+              "ToolTip": "C:\\Users\\laure\\projects\\ProyectoPoo\\SistemaDeReservas.API\\SistemaDeReservas.API\\Database\\Entities\\ReservaEntity.cs",
+              "RelativeToolTip": "SistemaDeReservas.API\\Database\\Entities\\ReservaEntity.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAowCkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-13T04:03:03.471Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "HotelEntity.cs",
+              "DocumentMoniker": "C:\\Users\\laure\\projects\\ProyectoPoo\\SistemaDeReservas.API\\SistemaDeReservas.API\\Database\\Entities\\HotelEntity.cs",
+              "RelativeDocumentMoniker": "SistemaDeReservas.API\\Database\\Entities\\HotelEntity.cs",
+              "ToolTip": "C:\\Users\\laure\\projects\\ProyectoPoo\\SistemaDeReservas.API\\SistemaDeReservas.API\\Database\\Entities\\HotelEntity.cs",
+              "RelativeToolTip": "SistemaDeReservas.API\\Database\\Entities\\HotelEntity.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAUwA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-13T04:00:15.063Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IHabitacionService.cs",
+              "DocumentMoniker": "C:\\Users\\laure\\projects\\ProyectoPoo\\SistemaDeReservas.API\\SistemaDeReservas.API\\Services\\Interfaces\\IHabitacionService.cs",
+              "RelativeDocumentMoniker": "SistemaDeReservas.API\\Services\\Interfaces\\IHabitacionService.cs",
+              "ToolTip": "C:\\Users\\laure\\projects\\ProyectoPoo\\SistemaDeReservas.API\\SistemaDeReservas.API\\Services\\Interfaces\\IHabitacionService.cs",
+              "RelativeToolTip": "SistemaDeReservas.API\\Services\\Interfaces\\IHabitacionService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-15T03:26:33.501Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\laure\\projects\\ProyectoPoo\\SistemaDeReservas.API\\SistemaDeReservas.API\\Program.cs",
+              "RelativeDocumentMoniker": "SistemaDeReservas.API\\Program.cs",
+              "ToolTip": "C:\\Users\\laure\\projects\\ProyectoPoo\\SistemaDeReservas.API\\SistemaDeReservas.API\\Program.cs",
+              "RelativeToolTip": "SistemaDeReservas.API\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-15T03:37:03.627Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "HotelService.cs",
               "DocumentMoniker": "C:\\Users\\laure\\projects\\ProyectoPoo\\SistemaDeReservas.API\\SistemaDeReservas.API\\Services\\HotelService.cs",
               "RelativeDocumentMoniker": "SistemaDeReservas.API\\Services\\HotelService.cs",
               "ToolTip": "C:\\Users\\laure\\projects\\ProyectoPoo\\SistemaDeReservas.API\\SistemaDeReservas.API\\Services\\HotelService.cs",
               "RelativeToolTip": "SistemaDeReservas.API\\Services\\HotelService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAwAAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAuwBcAAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-13T23:23:57.557Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "HotelController.cs",
-              "DocumentMoniker": "C:\\Users\\laure\\projects\\ProyectoPoo\\SistemaDeReservas.API\\SistemaDeReservas.API\\Controllers\\HotelController.cs",
-              "RelativeDocumentMoniker": "SistemaDeReservas.API\\Controllers\\HotelController.cs",
-              "ToolTip": "C:\\Users\\laure\\projects\\ProyectoPoo\\SistemaDeReservas.API\\SistemaDeReservas.API\\Controllers\\HotelController.cs",
-              "RelativeToolTip": "SistemaDeReservas.API\\Controllers\\HotelController.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAcwCkAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T23:22:29.003Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 17,
               "Title": "ServicioAdicionalDto.cs",
               "DocumentMoniker": "C:\\Users\\laure\\projects\\ProyectoPoo\\SistemaDeReservas.API\\SistemaDeReservas.API\\Dtos\\ServiciosAdicionales\\ServicioAdicionalDto.cs",
               "RelativeDocumentMoniker": "SistemaDeReservas.API\\Dtos\\ServiciosAdicionales\\ServicioAdicionalDto.cs",
@@ -214,24 +321,47 @@
               "RelativeToolTip": "SistemaDeReservas.API\\Dtos\\ServiciosAdicionales\\ServicioAdicionalDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T06:19:17.622Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-13T06:19:17.622Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 13,
-              "Title": "HabitacionCreateDto.cs",
-              "DocumentMoniker": "C:\\Users\\laure\\projects\\ProyectoPoo\\SistemaDeReservas.API\\SistemaDeReservas.API\\Dtos\\Habitaciones\\HabitacionCreateDto.cs",
-              "RelativeDocumentMoniker": "SistemaDeReservas.API\\Dtos\\Habitaciones\\HabitacionCreateDto.cs",
-              "ToolTip": "C:\\Users\\laure\\projects\\ProyectoPoo\\SistemaDeReservas.API\\SistemaDeReservas.API\\Dtos\\Habitaciones\\HabitacionCreateDto.cs",
-              "RelativeToolTip": "SistemaDeReservas.API\\Dtos\\Habitaciones\\HabitacionCreateDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABAAAAAAAAAAA==",
+              "Title": "HotelController.cs",
+              "DocumentMoniker": "C:\\Users\\laure\\projects\\ProyectoPoo\\SistemaDeReservas.API\\SistemaDeReservas.API\\Controllers\\HotelController.cs",
+              "RelativeDocumentMoniker": "SistemaDeReservas.API\\Controllers\\HotelController.cs",
+              "ToolTip": "C:\\Users\\laure\\projects\\ProyectoPoo\\SistemaDeReservas.API\\SistemaDeReservas.API\\Controllers\\HotelController.cs",
+              "RelativeToolTip": "SistemaDeReservas.API\\Controllers\\HotelController.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAcwCkAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T05:47:20.143Z"
+              "WhenOpened": "2025-04-13T23:22:29.003Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 14,
+              "Title": "IHotelService.cs",
+              "DocumentMoniker": "C:\\Users\\laure\\projects\\ProyectoPoo\\SistemaDeReservas.API\\SistemaDeReservas.API\\Services\\Interfaces\\IHotelService.cs",
+              "RelativeDocumentMoniker": "SistemaDeReservas.API\\Services\\Interfaces\\IHotelService.cs",
+              "ToolTip": "C:\\Users\\laure\\projects\\ProyectoPoo\\SistemaDeReservas.API\\SistemaDeReservas.API\\Services\\Interfaces\\IHotelService.cs",
+              "RelativeToolTip": "SistemaDeReservas.API\\Services\\Interfaces\\IHotelService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-13T23:27:15.284Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ResponseDto.cs",
+              "DocumentMoniker": "C:\\Users\\laure\\projects\\ProyectoPoo\\SistemaDeReservas.API\\SistemaDeReservas.API\\Dtos\\Common\\ResponseDto.cs",
+              "RelativeDocumentMoniker": "SistemaDeReservas.API\\Dtos\\Common\\ResponseDto.cs",
+              "ToolTip": "C:\\Users\\laure\\projects\\ProyectoPoo\\SistemaDeReservas.API\\SistemaDeReservas.API\\Dtos\\Common\\ResponseDto.cs",
+              "RelativeToolTip": "SistemaDeReservas.API\\Dtos\\Common\\ResponseDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-13T23:31:01.35Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "BaseEntity.cs",
               "DocumentMoniker": "C:\\Users\\laure\\projects\\ProyectoPoo\\SistemaDeReservas.API\\SistemaDeReservas.API\\Database\\Entities\\Common\\BaseEntity.cs",
               "RelativeDocumentMoniker": "SistemaDeReservas.API\\Database\\Entities\\Common\\BaseEntity.cs",
@@ -244,7 +374,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 20,
               "Title": "PagoCreateDto.cs",
               "DocumentMoniker": "C:\\Users\\laure\\projects\\ProyectoPoo\\SistemaDeReservas.API\\SistemaDeReservas.API\\Dtos\\Pagos\\PagoCreateDto.cs",
               "RelativeDocumentMoniker": "SistemaDeReservas.API\\Dtos\\Pagos\\PagoCreateDto.cs",
@@ -256,7 +386,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 21,
               "Title": "ReservaCreateDto.cs",
               "DocumentMoniker": "C:\\Users\\laure\\projects\\ProyectoPoo\\SistemaDeReservas.API\\SistemaDeReservas.API\\Dtos\\Reservas\\ReservaCreateDto.cs",
               "RelativeDocumentMoniker": "SistemaDeReservas.API\\Dtos\\Reservas\\ReservaCreateDto.cs",
@@ -268,7 +398,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 16,
               "Title": "HotelEditDto.cs",
               "DocumentMoniker": "C:\\Users\\laure\\projects\\ProyectoPoo\\SistemaDeReservas.API\\SistemaDeReservas.API\\Dtos\\Hoteles\\HotelEditDto.cs",
               "RelativeDocumentMoniker": "SistemaDeReservas.API\\Dtos\\Hoteles\\HotelEditDto.cs",
@@ -276,12 +406,11 @@
               "RelativeToolTip": "SistemaDeReservas.API\\Dtos\\Hoteles\\HotelEditDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T05:35:32.068Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-13T05:35:32.068Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 15,
               "Title": "ClienteEditDto.cs",
               "DocumentMoniker": "C:\\Users\\laure\\projects\\ProyectoPoo\\SistemaDeReservas.API\\SistemaDeReservas.API\\Dtos\\Clientes\\ClienteEditDto.cs",
               "RelativeDocumentMoniker": "SistemaDeReservas.API\\Dtos\\Clientes\\ClienteEditDto.cs",
@@ -289,25 +418,11 @@
               "RelativeToolTip": "SistemaDeReservas.API\\Dtos\\Clientes\\ClienteEditDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T05:56:39.069Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-13T05:56:39.069Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "HabitacionEditDto.cs",
-              "DocumentMoniker": "C:\\Users\\laure\\projects\\ProyectoPoo\\SistemaDeReservas.API\\SistemaDeReservas.API\\Dtos\\Habitaciones\\HabitacionEditDto.cs",
-              "RelativeDocumentMoniker": "SistemaDeReservas.API\\Dtos\\Habitaciones\\HabitacionEditDto.cs",
-              "ToolTip": "C:\\Users\\laure\\projects\\ProyectoPoo\\SistemaDeReservas.API\\SistemaDeReservas.API\\Dtos\\Habitaciones\\HabitacionEditDto.cs",
-              "RelativeToolTip": "SistemaDeReservas.API\\Dtos\\Habitaciones\\HabitacionEditDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T05:47:52.601Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 19,
               "Title": "PagoDto.cs",
               "DocumentMoniker": "C:\\Users\\laure\\projects\\ProyectoPoo\\SistemaDeReservas.API\\SistemaDeReservas.API\\Dtos\\Pagos\\PagoDto.cs",
               "RelativeDocumentMoniker": "SistemaDeReservas.API\\Dtos\\Pagos\\PagoDto.cs",
@@ -319,7 +434,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 18,
               "Title": "PagoEditDto.cs",
               "DocumentMoniker": "C:\\Users\\laure\\projects\\ProyectoPoo\\SistemaDeReservas.API\\SistemaDeReservas.API\\Dtos\\Pagos\\PagoEditDto.cs",
               "RelativeDocumentMoniker": "SistemaDeReservas.API\\Dtos\\Pagos\\PagoEditDto.cs",
@@ -331,7 +446,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 22,
               "Title": "PagoActionResponseDto.cs",
               "DocumentMoniker": "C:\\Users\\laure\\projects\\ProyectoPoo\\SistemaDeReservas.API\\SistemaDeReservas.API\\Dtos\\Pagos\\PagoActionResponseDto.cs",
               "RelativeDocumentMoniker": "SistemaDeReservas.API\\Dtos\\Pagos\\PagoActionResponseDto.cs",
@@ -343,19 +458,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "PagoEntity.cs",
-              "DocumentMoniker": "C:\\Users\\laure\\projects\\ProyectoPoo\\SistemaDeReservas.API\\SistemaDeReservas.API\\Database\\Entities\\PagoEntity.cs",
-              "RelativeDocumentMoniker": "SistemaDeReservas.API\\Database\\Entities\\PagoEntity.cs",
-              "ToolTip": "C:\\Users\\laure\\projects\\ProyectoPoo\\SistemaDeReservas.API\\SistemaDeReservas.API\\Database\\Entities\\PagoEntity.cs",
-              "RelativeToolTip": "SistemaDeReservas.API\\Database\\Entities\\PagoEntity.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAwAYAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T04:03:28.149Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 23,
               "Title": "ReservaActionResponseDto.cs",
               "DocumentMoniker": "C:\\Users\\laure\\projects\\ProyectoPoo\\SistemaDeReservas.API\\SistemaDeReservas.API\\Dtos\\Reservas\\ReservaActionResponseDto.cs",
               "RelativeDocumentMoniker": "SistemaDeReservas.API\\Dtos\\Reservas\\ReservaActionResponseDto.cs",
@@ -367,7 +470,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 24,
               "Title": "ReservaEditDto.cs",
               "DocumentMoniker": "C:\\Users\\laure\\projects\\ProyectoPoo\\SistemaDeReservas.API\\SistemaDeReservas.API\\Dtos\\Reservas\\ReservaEditDto.cs",
               "RelativeDocumentMoniker": "SistemaDeReservas.API\\Dtos\\Reservas\\ReservaEditDto.cs",
@@ -379,7 +482,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 25,
               "Title": "ReservaDto.cs",
               "DocumentMoniker": "C:\\Users\\laure\\projects\\ProyectoPoo\\SistemaDeReservas.API\\SistemaDeReservas.API\\Dtos\\Reservas\\ReservaDto.cs",
               "RelativeDocumentMoniker": "SistemaDeReservas.API\\Dtos\\Reservas\\ReservaDto.cs",
@@ -391,7 +494,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 26,
               "Title": "ClienteActionResponseDto.cs",
               "DocumentMoniker": "C:\\Users\\laure\\projects\\ProyectoPoo\\SistemaDeReservas.API\\SistemaDeReservas.API\\Dtos\\Clientes\\ClienteActionResponseDto.cs",
               "RelativeDocumentMoniker": "SistemaDeReservas.API\\Dtos\\Clientes\\ClienteActionResponseDto.cs",
@@ -403,7 +506,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 27,
               "Title": "ClienteDto.cs",
               "DocumentMoniker": "C:\\Users\\laure\\projects\\ProyectoPoo\\SistemaDeReservas.API\\SistemaDeReservas.API\\Dtos\\Clientes\\ClienteDto.cs",
               "RelativeDocumentMoniker": "SistemaDeReservas.API\\Dtos\\Clientes\\ClienteDto.cs",
@@ -415,7 +518,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 28,
               "Title": "ClienteCreateDto.cs",
               "DocumentMoniker": "C:\\Users\\laure\\projects\\ProyectoPoo\\SistemaDeReservas.API\\SistemaDeReservas.API\\Dtos\\Clientes\\ClienteCreateDto.cs",
               "RelativeDocumentMoniker": "SistemaDeReservas.API\\Dtos\\Clientes\\ClienteCreateDto.cs",
@@ -427,7 +530,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 30,
               "Title": "HabitacionActionResponseDto.cs",
               "DocumentMoniker": "C:\\Users\\laure\\projects\\ProyectoPoo\\SistemaDeReservas.API\\SistemaDeReservas.API\\Dtos\\Habitaciones\\HabitacionActionResponseDto.cs",
               "RelativeDocumentMoniker": "SistemaDeReservas.API\\Dtos\\Habitaciones\\HabitacionActionResponseDto.cs",
@@ -439,7 +542,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 31,
               "Title": "HabitacionDto.cs",
               "DocumentMoniker": "C:\\Users\\laure\\projects\\ProyectoPoo\\SistemaDeReservas.API\\SistemaDeReservas.API\\Dtos\\Habitaciones\\HabitacionDto.cs",
               "RelativeDocumentMoniker": "SistemaDeReservas.API\\Dtos\\Habitaciones\\HabitacionDto.cs",
@@ -451,7 +554,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 29,
               "Title": "HotelDto.cs",
               "DocumentMoniker": "C:\\Users\\laure\\projects\\ProyectoPoo\\SistemaDeReservas.API\\SistemaDeReservas.API\\Dtos\\Hoteles\\HotelDto.cs",
               "RelativeDocumentMoniker": "SistemaDeReservas.API\\Dtos\\Hoteles\\HotelDto.cs",
@@ -463,7 +566,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 38,
               "Title": "20250413043608_Correcciones.cs",
               "DocumentMoniker": "C:\\Users\\laure\\projects\\ProyectoPoo\\SistemaDeReservas.API\\SistemaDeReservas.API\\Migrations\\20250413043608_Correcciones.cs",
               "RelativeDocumentMoniker": "SistemaDeReservas.API\\Migrations\\20250413043608_Correcciones.cs",
@@ -475,7 +578,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 34,
               "Title": "20250413043310_FirstMigration.cs",
               "DocumentMoniker": "C:\\Users\\laure\\projects\\ProyectoPoo\\SistemaDeReservas.API\\SistemaDeReservas.API\\Migrations\\20250413043310_FirstMigration.cs",
               "RelativeDocumentMoniker": "SistemaDeReservas.API\\Migrations\\20250413043310_FirstMigration.cs",
@@ -487,7 +590,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 33,
               "Title": "ClienteEntity.cs",
               "DocumentMoniker": "C:\\Users\\laure\\projects\\ProyectoPoo\\SistemaDeReservas.API\\SistemaDeReservas.API\\Database\\Entities\\ClienteEntity.cs",
               "RelativeDocumentMoniker": "SistemaDeReservas.API\\Database\\Entities\\ClienteEntity.cs",
@@ -499,31 +602,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "HabitacionEntity.cs",
-              "DocumentMoniker": "C:\\Users\\laure\\projects\\ProyectoPoo\\SistemaDeReservas.API\\SistemaDeReservas.API\\Database\\Entities\\HabitacionEntity.cs",
-              "RelativeDocumentMoniker": "SistemaDeReservas.API\\Database\\Entities\\HabitacionEntity.cs",
-              "ToolTip": "C:\\Users\\laure\\projects\\ProyectoPoo\\SistemaDeReservas.API\\SistemaDeReservas.API\\Database\\Entities\\HabitacionEntity.cs",
-              "RelativeToolTip": "SistemaDeReservas.API\\Database\\Entities\\HabitacionEntity.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAgwAYAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T04:01:46.826Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "ReservaEntity.cs",
-              "DocumentMoniker": "C:\\Users\\laure\\projects\\ProyectoPoo\\SistemaDeReservas.API\\SistemaDeReservas.API\\Database\\Entities\\ReservaEntity.cs",
-              "RelativeDocumentMoniker": "SistemaDeReservas.API\\Database\\Entities\\ReservaEntity.cs",
-              "ToolTip": "C:\\Users\\laure\\projects\\ProyectoPoo\\SistemaDeReservas.API\\SistemaDeReservas.API\\Database\\Entities\\ReservaEntity.cs",
-              "RelativeToolTip": "SistemaDeReservas.API\\Database\\Entities\\ReservaEntity.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T04:03:03.471Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 32,
               "Title": "ServicioAdicionalEntity.cs",
               "DocumentMoniker": "C:\\Users\\laure\\projects\\ProyectoPoo\\SistemaDeReservas.API\\SistemaDeReservas.API\\Database\\Entities\\ServicioAdicionalEntity.cs",
               "RelativeDocumentMoniker": "SistemaDeReservas.API\\Database\\Entities\\ServicioAdicionalEntity.cs",
@@ -535,19 +614,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "HotelEntity.cs",
-              "DocumentMoniker": "C:\\Users\\laure\\projects\\ProyectoPoo\\SistemaDeReservas.API\\SistemaDeReservas.API\\Database\\Entities\\HotelEntity.cs",
-              "RelativeDocumentMoniker": "SistemaDeReservas.API\\Database\\Entities\\HotelEntity.cs",
-              "ToolTip": "C:\\Users\\laure\\projects\\ProyectoPoo\\SistemaDeReservas.API\\SistemaDeReservas.API\\Database\\Entities\\HotelEntity.cs",
-              "RelativeToolTip": "SistemaDeReservas.API\\Database\\Entities\\HotelEntity.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAwwA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T04:00:15.063Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 35,
               "Title": "ApiDbContext.cs",
               "DocumentMoniker": "C:\\Users\\laure\\projects\\ProyectoPoo\\SistemaDeReservas.API\\SistemaDeReservas.API\\Database\\ApiDbContext.cs",
               "RelativeDocumentMoniker": "SistemaDeReservas.API\\Database\\ApiDbContext.cs",
@@ -559,7 +626,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 36,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\laure\\projects\\ProyectoPoo\\SistemaDeReservas.API\\SistemaDeReservas.API\\appsettings.json",
               "RelativeDocumentMoniker": "SistemaDeReservas.API\\appsettings.json",
@@ -571,7 +638,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 37,
               "Title": "SistemaDeReservas.API.csproj",
               "DocumentMoniker": "C:\\Users\\laure\\projects\\ProyectoPoo\\SistemaDeReservas.API\\SistemaDeReservas.API\\SistemaDeReservas.API.csproj",
               "RelativeDocumentMoniker": "SistemaDeReservas.API\\SistemaDeReservas.API.csproj",

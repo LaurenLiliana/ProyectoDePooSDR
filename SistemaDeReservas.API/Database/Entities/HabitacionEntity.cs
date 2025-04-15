@@ -13,7 +13,7 @@ namespace SistemaDeReservas.API.Database.Entities
 
         [Column("numero")]
         [Required]
-        public string Número { get; set; }
+        public string Numero { get; set; }
 
         [Column("tipo")]
         [Required]
