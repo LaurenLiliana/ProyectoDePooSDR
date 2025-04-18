@@ -1,12 +1,16 @@
-﻿using SistemaDeReservas.API.Database.Entities.Common;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 
 namespace SistemaDeReservas.API.Database.Entities
 {
     [Table("pagos")]
-    public class PagoEntity : BaseEntity
+    public class PagoEntity 
     {
+        [Key] 
+        [Column("pago_id")]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int PagoId { get; set; }
+
         [Column("reserva_id")]
         [Required]
         public int ReservaId { get; set; }

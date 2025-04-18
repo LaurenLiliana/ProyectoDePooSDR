@@ -1,12 +1,16 @@
-﻿using SistemaDeReservas.API.Database.Entities.Common;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 
 namespace SistemaDeReservas.API.Database.Entities
 {
     [Table("reservas")]
-    public class ReservaEntity : BaseEntity
+    public class ReservaEntity 
     {
+        [Key] 
+        [Column("reserva_id")]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int ReservaId { get; set; }
+
         [Column("cliente_id")]
         [Required]
         public int ClienteId { get; set; }
@@ -15,13 +19,13 @@ namespace SistemaDeReservas.API.Database.Entities
         [Required]
         public int HabitacionId { get; set; }
 
-        [Column("FechaInicio")]
+        [Column("fechaInicio")]
         [Required]
-        public DateTime FechaInicio { get; set; }
+        public DateOnly FechaInicio { get; set; } 
 
-        [Column("FechaFin")]
+        [Column("fechaFin")]
         [Required]
-        public DateTime FechaFin { get; set; }
+        public DateOnly FechaFin { get; set; }
 
         [Column("estado")]
         [Required]
@@ -37,6 +41,6 @@ namespace SistemaDeReservas.API.Database.Entities
         [ForeignKey(nameof(HabitacionId))]
         public virtual HabitacionEntity Habitacion { get; set; }
 
-        public virtual ICollection<PagoEntity> Pagos { get; set; }
+        public virtual ICollection<ServicioAdicionalEntity> ServiciosAdicionales { get; set; }
     }
 }

@@ -1,12 +1,16 @@
-﻿using SistemaDeReservas.API.Database.Entities.Common;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 
 namespace SistemaDeReservas.API.Database.Entities
 {
     [Table("servicio_adicional")]
-    public class ServicioAdicionalEntity : BaseEntity
+    public class ServicioAdicionalEntity 
     {
+        [Key] 
+        [Column("servicio_adicional_id")]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int ServicioAdicionalId { get; set; }
+
         [Column("nombre")]
         [Required]
         public string Nombre { get; set; }

@@ -1,12 +1,16 @@
-﻿using SistemaDeReservas.API.Database.Entities.Common;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 
 namespace SistemaDeReservas.API.Database.Entities
 {
     [Table("habitaciones")]
-    public class HabitacionEntity : BaseEntity
+    public class HabitacionEntity 
     {
+        [Key]
+        [Column("habitacion_id")]  
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)] 
+        public int HabitacionId { get; set; }  
+
         [Column("hotel_id")]
         [Required]
         public int HotelId { get; set; }
@@ -34,7 +38,7 @@ namespace SistemaDeReservas.API.Database.Entities
         [Column("description")]
         public string Descripción { get; set; }
 
-        [ForeignKey(nameof(HotelId))]
+        [ForeignKey("HotelId")]
         public virtual HotelEntity Hotel { get; set; }
 
         public virtual ICollection<ReservaEntity> Reservas { get; set; }

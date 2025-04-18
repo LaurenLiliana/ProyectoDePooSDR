@@ -11,10 +11,12 @@ namespace SistemaDeReservas.API.Dtos.Reservas {
         public int HabitacionId { get; set; }
 
         [Required(ErrorMessage = "La fecha de inicio es obligatoria")]
-        public DateTime FechaInicio { get; set; }
+        [DataType(DataType.Date)]  
+        public DateOnly FechaInicio { get; set; }
 
         [Required(ErrorMessage = "La fecha de fin es obligatoria")]
-        public DateTime FechaFin { get; set; }
+        [DataType(DataType.Date)]
+        public DateOnly FechaFin { get; set; }
 
         [Required(ErrorMessage = "El estado es obligatorio")]
         [StringLength(20, ErrorMessage = "Máximo 20 caracteres")]

@@ -2,5 +2,6 @@
 {
     public class HotelEditDto : HotelCreateDto
     {
+        public int HotelId { get; set; }
     }
 }

@@ -1,10 +1,11 @@
 ﻿using AutoMapper;
 using Microsoft.EntityFrameworkCore;
-using Persons.API.Dtos.Common;
 using SistemaDeReservas.API.Database;
 using SistemaDeReservas.API.Database.Entities;
 using SistemaDeReservas.API.Dtos.Hotel;
+using SistemaDeReservas.API.Dtos.Habitacion;
 using SistemaDeReservas.API.Services.Interfaces;
+using Persons.API.Dtos.Common;
 
 namespace SistemaDeReservas.API.Services
 {
@@ -21,7 +22,10 @@ namespace SistemaDeReservas.API.Services
 
         public async Task<ResponseDto<List<HotelDto>>> GetListAsync()
         {
-            var hoteles = await _context.Hoteles.ToListAsync();
+            var hoteles = await _context.Hoteles
+                .Include(h => h.Habitaciones) 
+                .ToListAsync();
+
             return new ResponseDto<List<HotelDto>>
             {
                 StatusCode = 200,
@@ -33,7 +37,10 @@ namespace SistemaDeReservas.API.Services
 
         public async Task<ResponseDto<HotelDto>> GetByIdAsync(int id)
         {
-            var hotel = await _context.Hoteles.FindAsync(id);
+            var hotel = await _context.Hoteles
+                .Include(h => h.Habitaciones)  
+                .FirstOrDefaultAsync(h => h.HotelId == id);  
+
             if (hotel == null)
             {
                 return new ResponseDto<HotelDto>
@@ -64,7 +71,7 @@ namespace SistemaDeReservas.API.Services
 
                 return new ResponseDto<HotelActionResponseDto>
                 {
-                    StatusCode = 201, // 201 Created
+                    StatusCode = 201,
                     Status = true,
                     Message = "Hotel creado exitosamente",
                     Data = _mapper.Map<HotelActionResponseDto>(hotel)
@@ -77,16 +84,6 @@ namespace SistemaDeReservas.API.Services
                     StatusCode = 400,
                     Status = false,
                     Message = $"Error al crear hotel: {ex.InnerException?.Message ?? ex.Message}",
-                    Data = null
-                };
-            }
-            catch (Exception ex)
-            {
-                return new ResponseDto<HotelActionResponseDto>
-                {
-                    StatusCode = 500,
-                    Status = false,
-                    Message = $"Error interno: {ex.Message}",
                     Data = null
                 };
             }
@@ -108,7 +105,7 @@ namespace SistemaDeReservas.API.Services
                     };
                 }
 
-                _mapper.Map(dto, hotel); // Actualiza solo campos editables
+                _mapper.Map(dto, hotel);
                 await _context.SaveChangesAsync();
 
                 return new ResponseDto<HotelActionResponseDto>
@@ -126,16 +123,6 @@ namespace SistemaDeReservas.API.Services
                     StatusCode = 400,
                     Status = false,
                     Message = $"Error al actualizar: {ex.InnerException?.Message ?? ex.Message}",
-                    Data = null
-                };
-            }
-            catch (Exception ex)
-            {
-                return new ResponseDto<HotelActionResponseDto>
-                {
-                    StatusCode = 500,
-                    Status = false,
-                    Message = $"Error interno: {ex.Message}",
                     Data = null
                 };
             }
@@ -178,17 +165,6 @@ namespace SistemaDeReservas.API.Services
                     Data = false
                 };
             }
-            catch (Exception ex)
-            {
-                return new ResponseDto<bool>
-                {
-                    StatusCode = 500,
-                    Status = false,
-                    Message = $"Error interno: {ex.Message}",
-                    Data = false
-                };
-            }
         }
-
     }
 }

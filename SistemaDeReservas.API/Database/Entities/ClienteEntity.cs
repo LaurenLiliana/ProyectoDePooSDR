@@ -1,12 +1,16 @@
-﻿using SistemaDeReservas.API.Database.Entities.Common;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 
 namespace SistemaDeReservas.API.Database.Entities
 {
     [Table("clientes")]
-    public class ClienteEntity : BaseEntity
+    public class ClienteEntity 
     {
+        [Key] 
+        [Column("cliente_id")] 
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)] 
+        public int ClienteId { get; set; } 
+
         [Column("documento_id")]
         [Required]
         public string DocumentoId { get; set; }
@@ -21,7 +25,7 @@ namespace SistemaDeReservas.API.Database.Entities
 
         [Column("telefono")]
         [Required]
-        public string Teléfono { get; set; }
+        public string Telefono { get; set; }
 
         public virtual ICollection<ReservaEntity> Reservas { get; set; }
     }

@@ -1,12 +1,17 @@
-﻿using SistemaDeReservas.API.Database.Entities.Common;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 
 namespace SistemaDeReservas.API.Database.Entities
 {
     [Table("hoteles")]
-    public class HotelEntity : BaseEntity
+    public class HotelEntity 
     {
+        [Key]
+        [Column("hotel_id")]  
+        [Required]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]  
+        public int HotelId { get; set; }
+
         [Column("nombre")]
         [Required]
         [MaxLength(100)]
@@ -15,7 +20,7 @@ namespace SistemaDeReservas.API.Database.Entities
         [Column("direccion")]
         [Required]
         [MaxLength(200)]
-        public string Dirección { get; set; }
+        public string Direccion { get; set; }
 
         [Column("ciudad")]
         [Required]
@@ -23,7 +28,7 @@ namespace SistemaDeReservas.API.Database.Entities
 
         [Column("pais")]
         [Required]
-        public string País { get; set; }
+        public string Pais { get; set; }
 
         [Column("estrellas")]
         [Range(1, 5)]
@@ -31,7 +36,7 @@ namespace SistemaDeReservas.API.Database.Entities
 
         [Column("telefono")]
         [Required]
-        public string Teléfono { get; set; }
+        public string Telefono { get; set; }
 
         [Column("email")]
         [EmailAddress]

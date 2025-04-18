@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SistemaDeReservas.API.Database;
 
@@ -10,9 +11,11 @@ using SistemaDeReservas.API.Database;
 namespace SistemaDeReservas.API.Migrations
 {
     [DbContext(typeof(ApiDbContext))]
-    partial class ApiDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250418055105_AreggloDeIdsIndividuales")]
+    partial class AreggloDeIdsIndividuales
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "9.0.4");
@@ -105,7 +108,7 @@ namespace SistemaDeReservas.API.Migrations
                         .HasColumnType("TEXT")
                         .HasColumnName("ciudad");
 
-                    b.Property<string>("Direccion")
+                    b.Property<string>("Dirección")
                         .IsRequired()
                         .HasMaxLength(200)
                         .HasColumnType("TEXT")
@@ -125,12 +128,12 @@ namespace SistemaDeReservas.API.Migrations
                         .HasColumnType("TEXT")
                         .HasColumnName("nombre");
 
-                    b.Property<string>("Pais")
+                    b.Property<string>("País")
                         .IsRequired()
                         .HasColumnType("TEXT")
                         .HasColumnName("pais");
 
-                    b.Property<string>("Telefono")
+                    b.Property<string>("Teléfono")
                         .IsRequired()
                         .HasColumnType("TEXT")
                         .HasColumnName("telefono");
@@ -237,12 +240,7 @@ namespace SistemaDeReservas.API.Migrations
                         .HasColumnType("TEXT")
                         .HasColumnName("precio");
 
-                    b.Property<int?>("ReservaEntityReservaId")
-                        .HasColumnType("INTEGER");
-
                     b.HasKey("ServicioAdicionalId");
-
-                    b.HasIndex("ReservaEntityReservaId");
 
                     b.ToTable("servicio_adicional");
                 });
@@ -261,7 +259,7 @@ namespace SistemaDeReservas.API.Migrations
             modelBuilder.Entity("SistemaDeReservas.API.Database.Entities.PagoEntity", b =>
                 {
                     b.HasOne("SistemaDeReservas.API.Database.Entities.ReservaEntity", "Reserva")
-                        .WithMany()
+                        .WithMany("Pagos")
                         .HasForeignKey("ReservaId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -288,13 +286,6 @@ namespace SistemaDeReservas.API.Migrations
                     b.Navigation("Habitacion");
                 });
 
-            modelBuilder.Entity("SistemaDeReservas.API.Database.Entities.ServicioAdicionalEntity", b =>
-                {
-                    b.HasOne("SistemaDeReservas.API.Database.Entities.ReservaEntity", null)
-                        .WithMany("ServiciosAdicionales")
-                        .HasForeignKey("ReservaEntityReservaId");
-                });
-
             modelBuilder.Entity("SistemaDeReservas.API.Database.Entities.ClienteEntity", b =>
                 {
                     b.Navigation("Reservas");
@@ -312,7 +303,7 @@ namespace SistemaDeReservas.API.Migrations
 
             modelBuilder.Entity("SistemaDeReservas.API.Database.Entities.ReservaEntity", b =>
                 {
-                    b.Navigation("ServiciosAdicionales");
+                    b.Navigation("Pagos");
                 });
 #pragma warning restore 612, 618
         }

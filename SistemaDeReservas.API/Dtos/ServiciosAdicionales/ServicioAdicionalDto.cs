@@ -2,7 +2,7 @@
 {
     public class ServicioAdicionalDto
     {
-        public int Id { get; set; }
+        public int ServicioAdicionalId { get; set; }
         public string Nombre { get; set; }
         public string Descripcion { get; set; }
         public decimal Precio { get; set; }

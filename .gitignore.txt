@@ -1,20 +1,3 @@
-# Archivos y carpetas de Visual Studio
-.vs/
-*.user
-*.suo
+1. Hotel ↔ Habitación (Anidar ✅)
+Relación: 1 a muchos (un hotel tiene múltiples habitaciones).
 
-# Binarios y carpetas de compilación
-bin/
-obj/
-
-# Archivos temporales
-*.log
-*.tmp
-
-# Configuraciones locales
-*.vscode/
-*.db
-*.sqlite
-
-# Otros
-*.vsidx

@@ -14,22 +14,27 @@ namespace SistemaDeReservas.API.Helpers
     {
         public AutoMapperProfiles()
         {
-            CreateMap<HotelEntity, HotelDto>();
-            CreateMap<HotelEntity, Dtos.Hotel.HotelActionResponseDto>();
-            CreateMap<HotelCreateDto, HotelEntity>();
-            CreateMap<HotelEditDto, HotelEntity>();
-
-           CreateMap<HabitacionEntity, HabitacionDto>();
-            CreateMap<HabitacionEntity, Dtos.Habitacion.HabitacionActionResponseDto>();
-            CreateMap<HabitacionCreateDto, HabitacionEntity>();
-            CreateMap<HabitacionEditDto, HabitacionEntity>();
+            // Configuración para Hotel
+            CreateMap<HotelEntity, HotelDto>()
+                .ForMember(dest => dest.Habitaciones, opt => opt.MapFrom(src => src.Habitaciones));  
+            CreateMap<HotelEntity, HotelActionResponseDto>();  
+            CreateMap<HotelCreateDto, HotelEntity>();         
+            CreateMap<HotelEditDto, HotelEntity>();          
+           
+            CreateMap<HabitacionEntity, HabitacionDto>()
+                .ForMember(dest => dest.Hotel, opt => opt.MapFrom(src => new List<HotelEntity> { src.Hotel }));           
+            CreateMap<HabitacionEntity, HabitacionActionResponseDto>();       
+            CreateMap<HabitacionCreateDto, HabitacionEntity>();               
+            CreateMap<HabitacionEditDto, HabitacionEntity>();                 
 
             CreateMap<ClienteEntity, ClienteDto>();
             CreateMap<ClienteEntity, Dtos.Cliente.ClienteActionResponseDto>();
             CreateMap<ClienteCreateDto, ClienteEntity>();
             CreateMap<ClienteEditDto, ClienteEntity>();
 
-            CreateMap<ReservaEntity, ReservaDto>();
+            CreateMap<ReservaEntity, ReservaActionResponseDto>()
+                .ForMember(dest => dest.Habitacion, opt => opt.MapFrom(src => src.Habitacion))
+                 .ForMember(dest => dest.Servicios, opt => opt.MapFrom(src => src.ServiciosAdicionales));
             CreateMap<ReservaEntity, Dtos.Reservas.ReservaActionResponseDto>();
             CreateMap<ReservaCreateDto, ReservaEntity>();
             CreateMap<ReservaEditDto, ReservaEntity>();

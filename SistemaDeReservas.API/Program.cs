@@ -14,12 +14,17 @@ builder.Services.AddDbContext<ApiDbContext>(options =>
 
 builder.Services.AddAutoMapper(typeof(AutoMapperProfiles));
 
-builder.Services.AddControllers();
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
+builder.Services.AddControllers()
+    .AddJsonOptions(options =>
+    {
+        options.JsonSerializerOptions.Converters.Add(new DateOnlyJsonConverter());
+    });
 
 builder.Services.AddOpenApi();
 builder.Services.AddScoped<IHotelService, HotelService>();
 builder.Services.AddScoped<IHabitacionService, HabitacionService>();
+builder.Services.AddScoped<IClienteService, ClienteService>();
+//builder.Services.AddScoped<IReservaService, ReservaService>();
 
 var app = builder.Build();
 

@@ -8,7 +8,6 @@ namespace SistemaDeReservas.API.Database
         public ApiDbContext(DbContextOptions<ApiDbContext> options) : base(options)
         {
         }
-
         public DbSet<HotelEntity> Hoteles { get; set; }
         public DbSet<HabitacionEntity> Habitaciones { get; set; }
         public DbSet<ClienteEntity> Clientes { get; set; }

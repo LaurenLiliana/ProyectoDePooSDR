@@ -1,10 +1,10 @@
 ﻿using AutoMapper;
 using Microsoft.EntityFrameworkCore;
-using Persons.API.Dtos.Common;
 using SistemaDeReservas.API.Database;
 using SistemaDeReservas.API.Database.Entities;
 using SistemaDeReservas.API.Dtos.Habitacion;
 using SistemaDeReservas.API.Services.Interfaces;
+using Persons.API.Dtos.Common;
 
 namespace SistemaDeReservas.API.Services
 {
@@ -24,7 +24,7 @@ namespace SistemaDeReservas.API.Services
             try
             {
                 var habitaciones = await _context.Habitaciones
-                    .Include(h => h.Hotel)  // Carga relacionada si es necesario
+                    .Include(h => h.Hotel) 
                     .ToListAsync();
 
                 return new ResponseDto<List<HabitacionDto>>
@@ -41,7 +41,7 @@ namespace SistemaDeReservas.API.Services
                 {
                     StatusCode = 500,
                     Status = false,
-                    Message = $"Error al obtener habitaciones: {ex.Message}",
+                    Message = $"Error: {ex.Message}",
                     Data = null
                 };
             }
@@ -52,8 +52,8 @@ namespace SistemaDeReservas.API.Services
             try
             {
                 var habitacion = await _context.Habitaciones
-                    .Include(h => h.Hotel)
-                    .FirstOrDefaultAsync(h => h.Id == id);
+                  .Include(h => h.Hotel) 
+                  .FirstOrDefaultAsync(h => h.HabitacionId == id);
 
                 if (habitacion == null)
                 {
@@ -80,7 +80,7 @@ namespace SistemaDeReservas.API.Services
                 {
                     StatusCode = 500,
                     Status = false,
-                    Message = $"Error al obtener habitación: {ex.Message}",
+                    Message = $"Error: {ex.Message}",
                     Data = null
                 };
             }
@@ -90,11 +90,23 @@ namespace SistemaDeReservas.API.Services
         {
             try
             {
-                // Validar número único por hotel
-                var existeNumero = await _context.Habitaciones
+                
+                var hotelExiste = await _context.Hoteles.AnyAsync(h => h.HotelId == dto.HotelId);
+                if (!hotelExiste)
+                {
+                    return new ResponseDto<HabitacionActionResponseDto>
+                    {
+                        StatusCode = 400,
+                        Status = false,
+                        Message = "El hotel especificado no existe",
+                        Data = null
+                    };
+                }
+
+                var numeroRepetido = await _context.Habitaciones
                     .AnyAsync(h => h.HotelId == dto.HotelId && h.Numero == dto.Numero);
 
-                if (existeNumero)
+                if (numeroRepetido)
                 {
                     return new ResponseDto<HabitacionActionResponseDto>
                     {
@@ -117,23 +129,13 @@ namespace SistemaDeReservas.API.Services
                     Data = _mapper.Map<HabitacionActionResponseDto>(habitacion)
                 };
             }
-            catch (DbUpdateException ex)
-            {
-                return new ResponseDto<HabitacionActionResponseDto>
-                {
-                    StatusCode = 400,
-                    Status = false,
-                    Message = $"Error al crear habitación: {ex.InnerException?.Message ?? ex.Message}",
-                    Data = null
-                };
-            }
             catch (Exception ex)
             {
                 return new ResponseDto<HabitacionActionResponseDto>
                 {
                     StatusCode = 500,
                     Status = false,
-                    Message = $"Error interno: {ex.Message}",
+                    Message = $"Error: {ex.Message}",
                     Data = null
                 };
             }
@@ -143,7 +145,6 @@ namespace SistemaDeReservas.API.Services
         {
             try
             {
-                // Obtener la habitación existente
                 var habitacion = await _context.Habitaciones.FindAsync(id);
                 if (habitacion == null)
                 {
@@ -156,46 +157,43 @@ namespace SistemaDeReservas.API.Services
                     };
                 }
 
-                // Validar número único si cambió
+           
                 if (habitacion.Numero != dto.Numero)
                 {
                     var existeNumero = await _context.Habitaciones
-                        .AnyAsync(h => h.HotelId == habitacion.HotelId &&
-                                      h.Numero == dto.Numero &&
-                                      h.Id != id);
+                        .AnyAsync(h => h.HotelId == dto.HotelId &&
+                                       h.Numero == dto.Numero &&
+                                       h.HabitacionId != id);
                     if (existeNumero)
                     {
                         return new ResponseDto<HabitacionActionResponseDto>
                         {
                             StatusCode = 400,
                             Status = false,
-                            Message = "Ya existe otra habitación con este número en el hotel",
+                            Message = "El número de habitación ya está en uso",
                             Data = null
                         };
                     }
                 }
 
-                // Actualizar solo los campos permitidos (excluyendo el Id)
                 _mapper.Map(dto, habitacion);
-                habitacion.Id = id; // Asegurar que el ID no se modifique
-
                 await _context.SaveChangesAsync();
 
                 return new ResponseDto<HabitacionActionResponseDto>
                 {
                     StatusCode = 200,
                     Status = true,
-                    Message = "Habitación actualizada exitosamente",
+                    Message = "Habitación actualizada",
                     Data = _mapper.Map<HabitacionActionResponseDto>(habitacion)
                 };
             }
-            catch (DbUpdateException ex)
+            catch (Exception ex)
             {
                 return new ResponseDto<HabitacionActionResponseDto>
                 {
-                    StatusCode = 400,
+                    StatusCode = 500,
                     Status = false,
-                    Message = $"Error al actualizar: {ex.InnerException?.Message ?? ex.Message}",
+                    Message = $"Error: {ex.Message}",
                     Data = null
                 };
             }
@@ -217,14 +215,17 @@ namespace SistemaDeReservas.API.Services
                     };
                 }
 
-                var tieneReservas = await _context.Reservas.AnyAsync(r => r.HabitacionId == id);
+                var hoy = DateOnly.FromDateTime(DateTime.Today);
+                var tieneReservas = await _context.Reservas
+                    .AnyAsync(r => r.HabitacionId == id && r.FechaFin >= hoy);
+
                 if (tieneReservas)
                 {
                     return new ResponseDto<bool>
                     {
                         StatusCode = 400,
                         Status = false,
-                        Message = "No se puede eliminar: La habitación tiene reservas asociadas",
+                        Message = "No se puede eliminar: Hay reservas futuras para esta habitación",
                         Data = false
                     };
                 }
@@ -240,13 +241,13 @@ namespace SistemaDeReservas.API.Services
                     Data = true
                 };
             }
-            catch (DbUpdateException ex)
+            catch (Exception ex)
             {
                 return new ResponseDto<bool>
                 {
                     StatusCode = 500,
                     Status = false,
-                    Message = $"Error al eliminar: {ex.InnerException?.Message ?? ex.Message}",
+                    Message = $"Error: {ex.Message}",
                     Data = false
                 };
             }

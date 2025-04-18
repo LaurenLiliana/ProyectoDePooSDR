@@ -5,7 +5,7 @@ using SistemaDeReservas.API.Services.Interfaces;
 
 namespace SistemaDeReservas.API.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/Habitaciones")]
     [ApiController]
     public class HabitacionesController : ControllerBase
     {
