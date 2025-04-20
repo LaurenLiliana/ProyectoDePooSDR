@@ -3,6 +3,7 @@ using SistemaDeReservas.API.Database.Entities;
 using SistemaDeReservas.API.Dtos.Cliente;
 using SistemaDeReservas.API.Dtos.Clientes;
 using SistemaDeReservas.API.Dtos.Habitacion;
+using SistemaDeReservas.API.Dtos.Habitaciones;
 using SistemaDeReservas.API.Dtos.Hotel;
 using SistemaDeReservas.API.Dtos.Pagos;
 using SistemaDeReservas.API.Dtos.Reservas;
@@ -14,33 +15,38 @@ namespace SistemaDeReservas.API.Helpers
     {
         public AutoMapperProfiles()
         {
-            // Configuración para Hotel
-            CreateMap<HotelEntity, HotelDto>()
-                .ForMember(dest => dest.Habitaciones, opt => opt.MapFrom(src => src.Habitaciones));  
-            CreateMap<HotelEntity, HotelActionResponseDto>();  
-            CreateMap<HotelCreateDto, HotelEntity>();         
-            CreateMap<HotelEditDto, HotelEntity>();          
-           
-            CreateMap<HabitacionEntity, HabitacionDto>()
-                .ForMember(dest => dest.Hotel, opt => opt.MapFrom(src => new List<HotelEntity> { src.Hotel }));           
-            CreateMap<HabitacionEntity, HabitacionActionResponseDto>();       
-            CreateMap<HabitacionCreateDto, HabitacionEntity>();               
-            CreateMap<HabitacionEditDto, HabitacionEntity>();                 
+            CreateMap<HotelEntity, HotelDto>();
+            CreateMap<HotelEntity, HotelActionResponseDto>()
+                 .ForMember(dest => dest.Habitaciones, opt => opt.MapFrom(src => src.Habitaciones));
+            CreateMap<HotelCreateDto, HotelEntity>();
+            CreateMap<HotelEditDto, HotelEntity>();
+            CreateMap<HotelEntity, HotelParaHabitacionDto>();
+
+            CreateMap<HabitacionEntity, HabitacionDto>();
+            CreateMap<HabitacionEntity, HabitacionActionResponseDto>();
+            CreateMap<HabitacionCreateDto, HabitacionEntity>();
+            CreateMap<HabitacionEditDto, HabitacionEntity>();
+            CreateMap<HabitacionEntity, HabitacionActionResponseDto>();
+            CreateMap<HabitacionEntity, HabitacionActionResponseDtoDos>()
+              .ForMember(dest => dest.Hotel, opt => opt.MapFrom(src => src.Hotel));
+
 
             CreateMap<ClienteEntity, ClienteDto>();
             CreateMap<ClienteEntity, Dtos.Cliente.ClienteActionResponseDto>();
             CreateMap<ClienteCreateDto, ClienteEntity>();
             CreateMap<ClienteEditDto, ClienteEntity>();
 
-            CreateMap<ReservaEntity, ReservaActionResponseDto>()
-                .ForMember(dest => dest.Habitacion, opt => opt.MapFrom(src => src.Habitacion))
-                 .ForMember(dest => dest.Servicios, opt => opt.MapFrom(src => src.ServiciosAdicionales));
+            CreateMap<ReservaEntity, ReservaDto>()
+            .ForMember(dest => dest.Habitacion, opt => opt.MapFrom((src, dest, member, context) =>
+                new List<HabitacionActionResponseDto> { context.Mapper.Map<HabitacionActionResponseDto>(src.Habitacion) }));
             CreateMap<ReservaEntity, Dtos.Reservas.ReservaActionResponseDto>();
             CreateMap<ReservaCreateDto, ReservaEntity>();
             CreateMap<ReservaEditDto, ReservaEntity>();
 
+
             CreateMap<PagoEntity, PagoDto>();
             CreateMap<PagoEntity, Dtos.Pagos.PagoActionResponseDto>();
+            CreateMap<PagoCreateDto, PagoEntity>();
             CreateMap<PagoCreateDto, PagoEntity>();
             CreateMap<PagoEditDto, PagoEntity>();
 

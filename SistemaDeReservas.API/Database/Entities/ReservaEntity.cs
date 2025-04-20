@@ -4,9 +4,9 @@ using System.ComponentModel.DataAnnotations;
 namespace SistemaDeReservas.API.Database.Entities
 {
     [Table("reservas")]
-    public class ReservaEntity 
+    public class ReservaEntity
     {
-        [Key] 
+        [Key]
         [Column("reserva_id")]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ReservaId { get; set; }
@@ -21,7 +21,7 @@ namespace SistemaDeReservas.API.Database.Entities
 
         [Column("fechaInicio")]
         [Required]
-        public DateOnly FechaInicio { get; set; } 
+        public DateOnly FechaInicio { get; set; }
 
         [Column("fechaFin")]
         [Required]
@@ -40,7 +40,9 @@ namespace SistemaDeReservas.API.Database.Entities
 
         [ForeignKey(nameof(HabitacionId))]
         public virtual HabitacionEntity Habitacion { get; set; }
+        //public virtual List<PagoEntity> Pagos { get; set; }
+        //public virtual List<ServicioAdicionalEntity> ServiciosAdicionales { get; set; }
 
-        public virtual ICollection<ServicioAdicionalEntity> ServiciosAdicionales { get; set; }
     }
+
 }

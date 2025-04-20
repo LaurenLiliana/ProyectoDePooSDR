@@ -6,6 +6,7 @@ using SistemaDeReservas.API.Dtos.Hotel;
 using SistemaDeReservas.API.Dtos.Habitacion;
 using SistemaDeReservas.API.Services.Interfaces;
 using Persons.API.Dtos.Common;
+using SistemaDeReservas.API.Dtos.Habitaciones;
 
 namespace SistemaDeReservas.API.Services
 {
@@ -20,30 +21,17 @@ namespace SistemaDeReservas.API.Services
             _mapper = mapper;
         }
 
-        public async Task<ResponseDto<List<HotelDto>>> GetListAsync()
+        public async Task<ResponseDto<HotelActionResponseDto>> GetByIdAsync(int id)
         {
-            var hoteles = await _context.Hoteles
-                .Include(h => h.Habitaciones) 
-                .ToListAsync();
-
-            return new ResponseDto<List<HotelDto>>
-            {
-                StatusCode = 200,
-                Status = true,
-                Message = "Hoteles obtenidos exitosamente",
-                Data = _mapper.Map<List<HotelDto>>(hoteles)
-            };
-        }
-
-        public async Task<ResponseDto<HotelDto>> GetByIdAsync(int id)
-        {
+            // Obtener el hotel junto con sus habitaciones usando Include
             var hotel = await _context.Hoteles
-                .Include(h => h.Habitaciones)  
-                .FirstOrDefaultAsync(h => h.HotelId == id);  
+                .Include(h => h.Habitaciones) // Incluir las habitaciones asociadas
+                .FirstOrDefaultAsync(h => h.HotelId == id); // Buscar el hotel por ID
 
             if (hotel == null)
             {
-                return new ResponseDto<HotelDto>
+                // Si no se encuentra el hotel, devolver un error
+                return new ResponseDto<HotelActionResponseDto>
                 {
                     StatusCode = 404,
                     Status = false,
@@ -52,14 +40,34 @@ namespace SistemaDeReservas.API.Services
                 };
             }
 
-            return new ResponseDto<HotelDto>
+            // Mapear el hotel a DTO y devolver la respuesta
+            return new ResponseDto<HotelActionResponseDto>
             {
                 StatusCode = 200,
                 Status = true,
                 Message = "Hotel obtenido",
-                Data = _mapper.Map<HotelDto>(hotel)
+                Data = _mapper.Map<HotelActionResponseDto>(hotel) // Mapear el hotel con las habitaciones
             };
         }
+
+
+
+        public async Task<ResponseDto<List<HotelActionResponseDto>>> GetListAsync()
+        {
+            var hoteles = await _context.Hoteles
+                .Include(h => h.Habitaciones) // Incluir las habitaciones asociadas al hotel
+                .ToListAsync();
+
+            return new ResponseDto<List<HotelActionResponseDto>>
+            {
+                StatusCode = 200,
+                Status = true,
+                Message = "Lista de hoteles obtenida",
+                Data = _mapper.Map<List<HotelActionResponseDto>>(hoteles)
+            };
+        }
+
+
 
         public async Task<ResponseDto<HotelActionResponseDto>> CreateAsync(HotelCreateDto dto)
         {

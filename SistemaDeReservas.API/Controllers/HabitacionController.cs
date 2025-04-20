@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Persons.API.Dtos.Common;
 using SistemaDeReservas.API.Dtos.Habitacion;
+using SistemaDeReservas.API.Dtos.Habitaciones;
 using SistemaDeReservas.API.Services.Interfaces;
 
 namespace SistemaDeReservas.API.Controllers
@@ -17,18 +18,20 @@ namespace SistemaDeReservas.API.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<ResponseDto<List<HabitacionDto>>>> GetAll()
+        public async Task<ActionResult<ResponseDto<List<HabitacionActionResponseDtoDos>>>> GetAll()
         {
             var response = await _habitacionService.GetListAsync();
             return StatusCode(response.StatusCode, response);
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<ResponseDto<HabitacionDto>>> GetById(int id)
+        public async Task<ActionResult<ResponseDto<HabitacionActionResponseDtoDos>>> GetById(int id)
         {
             var response = await _habitacionService.GetByIdAsync(id);
             return StatusCode(response.StatusCode, response);
         }
+
+
 
         [HttpPost]
         public async Task<ActionResult<ResponseDto<HabitacionActionResponseDto>>> Create(

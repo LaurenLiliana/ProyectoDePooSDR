@@ -4,12 +4,16 @@ using System.ComponentModel.DataAnnotations;
 namespace SistemaDeReservas.API.Database.Entities
 {
     [Table("servicio_adicional")]
-    public class ServicioAdicionalEntity 
+    public class ServicioAdicionalEntity
     {
-        [Key] 
+        [Key]
         [Column("servicio_adicional_id")]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ServicioAdicionalId { get; set; }
+
+        //[Column("reserva_id")]
+        //[Required]
+        //public int ReservaId { get; set; }
 
         [Column("nombre")]
         [Required]
@@ -25,5 +29,9 @@ namespace SistemaDeReservas.API.Database.Entities
         [Column("disponible")]
         [Required]
         public bool Disponible { get; set; }
+
+        //[ForeignKey(nameof(ReservaId))]
+        //public ReservaEntity Reserva { get; set; }
     }
+
 }

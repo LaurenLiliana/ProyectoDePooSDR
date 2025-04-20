@@ -12,7 +12,7 @@ namespace SistemaDeReservas.API.Dtos.Hotel
         [Display(Name = "Dirección")]
         [Required(ErrorMessage = "El campo {0} es requerido")]
         [StringLength(200, MinimumLength = 10, ErrorMessage = "{0} debe tener entre {2} y {1} caracteres")]
-        public string Dirección { get; set; }
+        public string Direccion { get; set; }
 
         [Display(Name = "Ciudad")]
         [Required(ErrorMessage = "El campo {0} es requerido")]
@@ -22,7 +22,7 @@ namespace SistemaDeReservas.API.Dtos.Hotel
         [Display(Name = "País")]
         [Required(ErrorMessage = "El campo {0} es requerido")]
         [StringLength(50, ErrorMessage = "{0} no debe exceder {1} caracteres")]
-        public string País { get; set; }
+        public string Pais { get; set; }
 
         [Display(Name = "Estrellas")]
         [Required(ErrorMessage = "El campo {0} es requerido")]
@@ -32,7 +32,7 @@ namespace SistemaDeReservas.API.Dtos.Hotel
         [Display(Name = "Teléfono")]
         [Required(ErrorMessage = "El campo {0} es requerido")]
         [Phone(ErrorMessage = "Formato de teléfono inválido")]
-        public string Teléfono { get; set; }
+        public string Telefono { get; set; }
 
         [Display(Name = "Email")]
         [EmailAddress(ErrorMessage = "Formato de email inválido")]

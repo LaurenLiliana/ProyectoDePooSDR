@@ -10,7 +10,5 @@ namespace SistemaDeReservas.API.Dtos.Habitacion
         public decimal PrecioPorNoche { get; set; }
         public int Capacidad { get; set; }
         public bool Disponible { get; set; }
-
-        public List<HotelActionResponseDto> Hotel { get; set; } = new List<HotelActionResponseDto>();
     }
 }

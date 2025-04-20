@@ -10,10 +10,11 @@ namespace SistemaDeReservas.API.Dtos.Pagos
 
         [Required(ErrorMessage = "El método de pago es obligatorio")]
         [StringLength(20, ErrorMessage = "Máximo 20 caracteres")]
-        public string Metodo { get; set; } // (Tarjeta, efectivo, transferencia
+        public string MetodoPago { get; set; } // (Tarjeta, efectivo, transferencia
 
         [Required(ErrorMessage = "La fecha de pago es obligatoria")]
-        public DateTime FechaPago { get; set; } = DateTime.Now;
+        [DataType(DataType.Date)]
+        public DateOnly FechaPago { get; set; } 
 
         [Required(ErrorMessage = "El estado es obligatorio")]
         [StringLength(15, ErrorMessage = "Máximo 15 caracteres")]

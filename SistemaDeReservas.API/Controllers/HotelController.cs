@@ -17,17 +17,15 @@ namespace SistemaDeReservas.API.Controllers
             _hotelService = hotelService;
         }
 
-        // GET: api/hoteles
         [HttpGet]
-        public async Task<ActionResult<ResponseDto<List<HotelDto>>>> GetAll()
+        public async Task<ActionResult<ResponseDto<List<HotelActionResponseDto>>>> GetAll()
         {
             var response = await _hotelService.GetListAsync();
             return StatusCode(response.StatusCode, response);
         }
 
-        // GET: api/hoteles/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<ResponseDto<HotelDto>>> GetById(int id)
+        public async Task<ActionResult<ResponseDto<HotelActionResponseDto>>> GetById(int id)
         {
             var response = await _hotelService.GetByIdAsync(id);
             return StatusCode(response.StatusCode, response);
@@ -43,7 +41,7 @@ namespace SistemaDeReservas.API.Controllers
 
         // PUT: api/hoteles/5
         [HttpPut("{id}")]
-        public async Task<ActionResult<ResponseDto<HotelActionResponseDto>>> Update(
+        public async Task<ActionResult<ResponseDto<HotelActionResponseDto>>> Edit(
             int id,
             [FromBody] HotelEditDto dto)
         {

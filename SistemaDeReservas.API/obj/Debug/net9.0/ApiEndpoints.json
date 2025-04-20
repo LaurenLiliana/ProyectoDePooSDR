@@ -138,7 +138,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "Persons.API.Dtos.Common.ResponseDto\u00601[[System.Collections.Generic.List\u00601[[SistemaDeReservas.API.Dtos.Habitacion.HabitacionDto, SistemaDeReservas.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "Type": "Persons.API.Dtos.Common.ResponseDto\u00601[[System.Collections.Generic.List\u00601[[SistemaDeReservas.API.Dtos.Habitaciones.HabitacionActionResponseDtoDos, SistemaDeReservas.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -190,7 +190,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Persons.API.Dtos.Common.ResponseDto\u00601[[SistemaDeReservas.API.Dtos.Habitacion.HabitacionDto, SistemaDeReservas.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "Persons.API.Dtos.Common.ResponseDto\u00601[[SistemaDeReservas.API.Dtos.Habitaciones.HabitacionActionResponseDtoDos, SistemaDeReservas.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -267,7 +267,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "Persons.API.Dtos.Common.ResponseDto\u00601[[System.Collections.Generic.List\u00601[[SistemaDeReservas.API.Dtos.Hotel.HotelDto, SistemaDeReservas.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "Type": "Persons.API.Dtos.Common.ResponseDto\u00601[[System.Collections.Generic.List\u00601[[SistemaDeReservas.API.Dtos.Hotel.HotelActionResponseDto, SistemaDeReservas.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -319,7 +319,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Persons.API.Dtos.Common.ResponseDto\u00601[[SistemaDeReservas.API.Dtos.Hotel.HotelDto, SistemaDeReservas.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "Persons.API.Dtos.Common.ResponseDto\u00601[[SistemaDeReservas.API.Dtos.Hotel.HotelActionResponseDto, SistemaDeReservas.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -331,7 +331,7 @@
   },
   {
     "ContainingType": "SistemaDeReservas.API.Controllers.HotelesController",
-    "Method": "Update",
+    "Method": "Edit",
     "RelativePath": "api/hoteles/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
@@ -364,6 +364,343 @@
     "ContainingType": "SistemaDeReservas.API.Controllers.HotelesController",
     "Method": "Delete",
     "RelativePath": "api/hoteles/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Persons.API.Dtos.Common.ResponseDto\u00601[[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaDeReservas.API.Controllers.PagoController",
+    "Method": "GetAll",
+    "RelativePath": "api/Pago",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SistemaDeReservas.API.Controllers.PagoController",
+    "Method": "Create",
+    "RelativePath": "api/Pago",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "SistemaDeReservas.API.Dtos.Pagos.PagoCreateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SistemaDeReservas.API.Controllers.PagoController",
+    "Method": "GetById",
+    "RelativePath": "api/Pago/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SistemaDeReservas.API.Controllers.PagoController",
+    "Method": "Edit",
+    "RelativePath": "api/Pago/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "SistemaDeReservas.API.Dtos.Pagos.PagoEditDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SistemaDeReservas.API.Controllers.PagoController",
+    "Method": "Delete",
+    "RelativePath": "api/Pago/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SistemaDeReservas.API.Controllers.ReservasController",
+    "Method": "GetAll",
+    "RelativePath": "api/Reserva",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "Persons.API.Dtos.Common.ResponseDto\u00601[[System.Collections.Generic.List\u00601[[SistemaDeReservas.API.Dtos.Reservas.ReservaDto, SistemaDeReservas.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaDeReservas.API.Controllers.ReservasController",
+    "Method": "Create",
+    "RelativePath": "api/Reserva",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "SistemaDeReservas.API.Dtos.Reservas.ReservaCreateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Persons.API.Dtos.Common.ResponseDto\u00601[[SistemaDeReservas.API.Dtos.Reservas.ReservaActionResponseDto, SistemaDeReservas.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaDeReservas.API.Controllers.ReservasController",
+    "Method": "GetById",
+    "RelativePath": "api/Reserva/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Persons.API.Dtos.Common.ResponseDto\u00601[[SistemaDeReservas.API.Dtos.Reservas.ReservaDto, SistemaDeReservas.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaDeReservas.API.Controllers.ReservasController",
+    "Method": "Edit",
+    "RelativePath": "api/Reserva/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "SistemaDeReservas.API.Dtos.Reservas.ReservaEditDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Persons.API.Dtos.Common.ResponseDto\u00601[[SistemaDeReservas.API.Dtos.Reservas.ReservaActionResponseDto, SistemaDeReservas.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaDeReservas.API.Controllers.ReservasController",
+    "Method": "Delete",
+    "RelativePath": "api/Reserva/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Persons.API.Dtos.Common.ResponseDto\u00601[[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaDeReservas.API.Controllers.ServiciosAdicionalesController",
+    "Method": "GetAll",
+    "RelativePath": "api/ServicioAdicional",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "Persons.API.Dtos.Common.ResponseDto\u00601[[System.Collections.Generic.List\u00601[[SistemaDeReservas.API.Dtos.ServiciosAdicionales.ServicioAdicionalDto, SistemaDeReservas.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaDeReservas.API.Controllers.ServiciosAdicionalesController",
+    "Method": "Create",
+    "RelativePath": "api/ServicioAdicional",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "SistemaDeReservas.API.Dtos.ServiciosAdicionales.ServicioAdicionalCreateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Persons.API.Dtos.Common.ResponseDto\u00601[[SistemaDeReservas.API.Dtos.ServiciosAdicionales.ServicioAdicionalActionResponseDto, SistemaDeReservas.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaDeReservas.API.Controllers.ServiciosAdicionalesController",
+    "Method": "GetById",
+    "RelativePath": "api/ServicioAdicional/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Persons.API.Dtos.Common.ResponseDto\u00601[[SistemaDeReservas.API.Dtos.ServiciosAdicionales.ServicioAdicionalDto, SistemaDeReservas.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaDeReservas.API.Controllers.ServiciosAdicionalesController",
+    "Method": "Edit",
+    "RelativePath": "api/ServicioAdicional/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "SistemaDeReservas.API.Dtos.ServiciosAdicionales.ServicioAdicionalEditDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Persons.API.Dtos.Common.ResponseDto\u00601[[SistemaDeReservas.API.Dtos.ServiciosAdicionales.ServicioAdicionalActionResponseDto, SistemaDeReservas.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SistemaDeReservas.API.Controllers.ServiciosAdicionalesController",
+    "Method": "Delete",
+    "RelativePath": "api/ServicioAdicional/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,

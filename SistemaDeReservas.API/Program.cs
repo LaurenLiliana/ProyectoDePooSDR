@@ -24,7 +24,10 @@ builder.Services.AddOpenApi();
 builder.Services.AddScoped<IHotelService, HotelService>();
 builder.Services.AddScoped<IHabitacionService, HabitacionService>();
 builder.Services.AddScoped<IClienteService, ClienteService>();
-//builder.Services.AddScoped<IReservaService, ReservaService>();
+builder.Services.AddScoped<IReservaService, ReservaService>();
+builder.Services.AddScoped<IServicioAdicionalService, ServicioAdicionalService>();
+builder.Services.AddScoped<IPagoService, PagoService>();
+
 
 var app = builder.Build();
 

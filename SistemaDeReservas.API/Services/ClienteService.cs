@@ -20,19 +20,17 @@ namespace SistemaDeReservas.API.Services
             _mapper = mapper;
         }
 
-        public async Task<ResponseDto<ClienteDto>> GetByIdAsync(int id)
+        public async Task<ResponseDto<ClienteActionResponseDto>> GetByIdAsync(int id)
         {
             var cliente = await _context.Clientes
                 .Include(c => c.Reservas)
                     .ThenInclude(r => r.Habitacion)
                         .ThenInclude(h => h.Hotel)
-                .Include(c => c.Reservas)
-                    .ThenInclude(r => r.ServiciosAdicionales)
                 .FirstOrDefaultAsync(c => c.ClienteId == id);
 
             if (cliente == null)
             {
-                return new ResponseDto<ClienteDto>
+                return new ResponseDto<ClienteActionResponseDto>
                 {
                     StatusCode = 404,
                     Status = false,
@@ -41,26 +39,36 @@ namespace SistemaDeReservas.API.Services
                 };
             }
 
-            return new ResponseDto<ClienteDto>
+            // Calculo del Pago 
+            foreach (var reserva in cliente.Reservas)
+            {
+                int dias = (reserva.FechaFin.DayNumber - reserva.FechaInicio.DayNumber);
+                reserva.TotalPago = dias * reserva.Habitacion.PrecioPorNoche;
+            }
+
+            return new ResponseDto<ClienteActionResponseDto>
             {
                 StatusCode = 200,
                 Status = true,
-                Message = "Cliente obtenido",
-                Data = _mapper.Map<ClienteDto>(cliente)
+                Message = "Cliente obtenido exitosamente",
+                Data = _mapper.Map<ClienteActionResponseDto>(cliente)
             };
         }
 
-        public async Task<ResponseDto<List<ClienteDto>>> GetAllAsync()
+
+        public async Task<ResponseDto<List<ClienteActionResponseDto>>> GetAllAsync()
         {
             var clientes = await _context.Clientes.ToListAsync();
-            return new ResponseDto<List<ClienteDto>>
+
+            return new ResponseDto<List<ClienteActionResponseDto>>
             {
                 StatusCode = 200,
                 Status = true,
                 Message = "Lista de clientes obtenida",
-                Data = _mapper.Map<List<ClienteDto>>(clientes)
+                Data = _mapper.Map<List<ClienteActionResponseDto>>(clientes)
             };
         }
+
 
         public async Task<ResponseDto<ClienteActionResponseDto>> CreateAsync(ClienteCreateDto dto)
         {

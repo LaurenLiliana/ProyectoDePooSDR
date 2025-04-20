@@ -5,6 +5,7 @@ using SistemaDeReservas.API.Database.Entities;
 using SistemaDeReservas.API.Dtos.Habitacion;
 using SistemaDeReservas.API.Services.Interfaces;
 using Persons.API.Dtos.Common;
+using SistemaDeReservas.API.Dtos.Habitaciones;
 
 namespace SistemaDeReservas.API.Services
 {
@@ -19,71 +20,45 @@ namespace SistemaDeReservas.API.Services
             _mapper = mapper;
         }
 
-        public async Task<ResponseDto<List<HabitacionDto>>> GetListAsync()
+        public async Task<ResponseDto<HabitacionActionResponseDtoDos>> GetByIdAsync(int id)
         {
-            try
-            {
-                var habitaciones = await _context.Habitaciones
-                    .Include(h => h.Hotel) 
-                    .ToListAsync();
+            var habitacion = await _context.Habitaciones
+                .Include(h => h.Hotel) 
+                .FirstOrDefaultAsync(h => h.HabitacionId == id);
 
-                return new ResponseDto<List<HabitacionDto>>
-                {
-                    StatusCode = 200,
-                    Status = true,
-                    Message = "Lista de habitaciones obtenida",
-                    Data = _mapper.Map<List<HabitacionDto>>(habitaciones)
-                };
-            }
-            catch (Exception ex)
+            if (habitacion == null)
             {
-                return new ResponseDto<List<HabitacionDto>>
+                return new ResponseDto<HabitacionActionResponseDtoDos>
                 {
-                    StatusCode = 500,
+                    StatusCode = 404,
                     Status = false,
-                    Message = $"Error: {ex.Message}",
+                    Message = "Habitación no encontrada",
                     Data = null
                 };
             }
+
+            return new ResponseDto<HabitacionActionResponseDtoDos>
+            {
+                StatusCode = 200,
+                Status = true,
+                Message = "Habitación obtenida",
+                Data = _mapper.Map<HabitacionActionResponseDtoDos>(habitacion) 
+            };
         }
 
-        public async Task<ResponseDto<HabitacionDto>> GetByIdAsync(int id)
+        public async Task<ResponseDto<List<HabitacionActionResponseDtoDos>>> GetListAsync()
         {
-            try
-            {
-                var habitacion = await _context.Habitaciones
-                  .Include(h => h.Hotel) 
-                  .FirstOrDefaultAsync(h => h.HabitacionId == id);
+            var habitaciones = await _context.Habitaciones
+                .Include(h => h.Hotel) 
+                .ToListAsync();
 
-                if (habitacion == null)
-                {
-                    return new ResponseDto<HabitacionDto>
-                    {
-                        StatusCode = 404,
-                        Status = false,
-                        Message = "Habitación no encontrada",
-                        Data = null
-                    };
-                }
-
-                return new ResponseDto<HabitacionDto>
-                {
-                    StatusCode = 200,
-                    Status = true,
-                    Message = "Habitación obtenida",
-                    Data = _mapper.Map<HabitacionDto>(habitacion)
-                };
-            }
-            catch (Exception ex)
+            return new ResponseDto<List<HabitacionActionResponseDtoDos>>
             {
-                return new ResponseDto<HabitacionDto>
-                {
-                    StatusCode = 500,
-                    Status = false,
-                    Message = $"Error: {ex.Message}",
-                    Data = null
-                };
-            }
+                StatusCode = 200,
+                Status = true,
+                Message = "Lista de habitaciones obtenida",
+                Data = _mapper.Map<List<HabitacionActionResponseDtoDos>>(habitaciones) 
+            };
         }
 
         public async Task<ResponseDto<HabitacionActionResponseDto>> CreateAsync(HabitacionCreateDto dto)

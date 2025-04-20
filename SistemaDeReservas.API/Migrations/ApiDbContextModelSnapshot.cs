@@ -152,7 +152,7 @@ namespace SistemaDeReservas.API.Migrations
                         .HasColumnType("TEXT")
                         .HasColumnName("estado");
 
-                    b.Property<DateTime>("FechaPago")
+                    b.Property<DateOnly>("FechaPago")
                         .HasColumnType("TEXT")
                         .HasColumnName("fecha_pago");
 
@@ -237,12 +237,13 @@ namespace SistemaDeReservas.API.Migrations
                         .HasColumnType("TEXT")
                         .HasColumnName("precio");
 
-                    b.Property<int?>("ReservaEntityReservaId")
-                        .HasColumnType("INTEGER");
+                    b.Property<int>("ReservaId")
+                        .HasColumnType("INTEGER")
+                        .HasColumnName("reserva_id");
 
                     b.HasKey("ServicioAdicionalId");
 
-                    b.HasIndex("ReservaEntityReservaId");
+                    b.HasIndex("ReservaId");
 
                     b.ToTable("servicio_adicional");
                 });
@@ -261,7 +262,7 @@ namespace SistemaDeReservas.API.Migrations
             modelBuilder.Entity("SistemaDeReservas.API.Database.Entities.PagoEntity", b =>
                 {
                     b.HasOne("SistemaDeReservas.API.Database.Entities.ReservaEntity", "Reserva")
-                        .WithMany()
+                        .WithMany("Pagos")
                         .HasForeignKey("ReservaId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -290,9 +291,13 @@ namespace SistemaDeReservas.API.Migrations
 
             modelBuilder.Entity("SistemaDeReservas.API.Database.Entities.ServicioAdicionalEntity", b =>
                 {
-                    b.HasOne("SistemaDeReservas.API.Database.Entities.ReservaEntity", null)
+                    b.HasOne("SistemaDeReservas.API.Database.Entities.ReservaEntity", "Reserva")
                         .WithMany("ServiciosAdicionales")
-                        .HasForeignKey("ReservaEntityReservaId");
+                        .HasForeignKey("ReservaId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Reserva");
                 });
 
             modelBuilder.Entity("SistemaDeReservas.API.Database.Entities.ClienteEntity", b =>
@@ -312,6 +317,8 @@ namespace SistemaDeReservas.API.Migrations
 
             modelBuilder.Entity("SistemaDeReservas.API.Database.Entities.ReservaEntity", b =>
                 {
+                    b.Navigation("Pagos");
+
                     b.Navigation("ServiciosAdicionales");
                 });
 #pragma warning restore 612, 618
