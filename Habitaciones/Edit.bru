@@ -1,0 +1,23 @@
+meta {
+  name: Edit
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{PATH}}/Habitaciones/1
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "numero": "10",
+    "tipo": "Doble",
+    "precioPorNoche": 1500,
+    "capacidad": 2,
+    "disponible": true,
+    "descripción": "Habitación con jacuzzi",
+    "hotelId": 5
+  }
+}

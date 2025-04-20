@@ -1,0 +1,20 @@
+meta {
+  name: Create
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{PATH}}/ServicioAdicional
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "nombre": "Servicio de Lavado",
+    "descripcion": "Lavado de ropa",
+    "precio": 1500,
+    "disponible": true
+  }
+}

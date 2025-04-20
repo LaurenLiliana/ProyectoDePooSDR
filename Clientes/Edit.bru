@@ -1,0 +1,20 @@
+meta {
+  name: Edit
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{PATH}}/Clientes/1
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "documentoId": "0401-2000-12345",
+    "nombre": "Amara",
+    "apellido": "Lopez",
+    "telefono": "96946541"
+  }
+}

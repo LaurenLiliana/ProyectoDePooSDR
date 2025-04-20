@@ -1,0 +1,21 @@
+meta {
+  name: Edit
+  type: http
+  seq: 3
+}
+
+put {
+  url: {{PATH}}/Reserva/1
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "clienteId": "1",
+      "habitacionId": 1,
+      "fechaInicio": "2025-05-17", 
+      "fechaFin": "2025-05-19",
+      "estado": "Pendiente"
+  }
+}

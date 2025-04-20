@@ -1,0 +1,20 @@
+meta {
+  name: Create
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{PATH}}/Clientes
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "documentoId": "0401199854321",
+    "nombre": "Daniel",
+    "apellido": "Rodriguez",
+    "telefono": "99114701"
+  }
+}

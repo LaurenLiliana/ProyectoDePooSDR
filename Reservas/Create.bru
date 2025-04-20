@@ -1,0 +1,21 @@
+meta {
+  name: Create
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{PATH}}/Reserva
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "clienteId": "3",
+      "habitacionId": 7,
+      "fechaInicio": "2025-05-18", 
+      "fechaFin": "2025-05-20",
+      "estado": "Confirmada"
+  }
+}

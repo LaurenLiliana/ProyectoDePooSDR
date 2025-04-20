@@ -1,0 +1,23 @@
+meta {
+  name: Edit
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{PATH}}/hoteles/5
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "nombre": "Hotel Escalon",
+    "direccion": "Barrio Santa Teresa",
+    "ciudad": "Santa Rosa de Copan",
+    "pais": "Honduras",
+    "estrellas": 2 ,
+    "telefono": "32802210",
+    "email": "hotelescalon@gmail.com"
+  }
+}
