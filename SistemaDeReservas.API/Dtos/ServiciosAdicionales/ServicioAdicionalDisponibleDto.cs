@@ -2,6 +2,6 @@
 {
     public class ServicioAdicionalDisponibleDto
     {
-        public bool TieneServicioAdicional { get; set; } 
+        public string TieneServicioAdicional { get; set; } 
     }
 }

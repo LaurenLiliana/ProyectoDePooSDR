@@ -258,6 +258,32 @@
     ]
   },
   {
+    "ContainingType": "SistemaDeReservas.API.Controllers.HabitacionesController",
+    "Method": "BuscarHabitaciones",
+    "RelativePath": "api/Habitaciones/buscar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "filtros",
+        "Type": "SistemaDeReservas.API.Dtos.Habitaciones.BuscarHabitacionesDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[SistemaDeReservas.API.Dtos.Habitacion.HabitacionDto, SistemaDeReservas.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "SistemaDeReservas.API.Controllers.HotelesController",
     "Method": "GetAll",
     "RelativePath": "api/hoteles",
@@ -385,6 +411,22 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "SistemaDeReservas.API.Controllers.NotificacionesController",
+    "Method": "EnviarNotificacion",
+    "RelativePath": "api/notification/enviar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "notificacion",
+        "Type": "SistemaDeReservas.API.Dtos.Reservas.NotificacionDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   },
   {
     "ContainingType": "SistemaDeReservas.API.Controllers.PagoController",
@@ -595,6 +637,48 @@
     ]
   },
   {
+    "ContainingType": "SistemaDeReservas.API.Controllers.ReservaCanceladaController",
+    "Method": "CancelarReserva",
+    "RelativePath": "api/reservas-canceladas/cancelar/{id}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SistemaDeReservas.API.Controllers.ReservaCanceladaController",
+    "Method": "ObtenerHistorial",
+    "RelativePath": "api/reservas-canceladas/historial/{clienteId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "clienteId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[SistemaDeReservas.API.Database.Entities.ReservaCanceladaEntity, SistemaDeReservas.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "SistemaDeReservas.API.Controllers.ServiciosAdicionalesController",
     "Method": "GetAll",
     "RelativePath": "api/ServicioAdicional",
@@ -630,7 +714,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Persons.API.Dtos.Common.ResponseDto\u00601[[SistemaDeReservas.API.Dtos.ServiciosAdicionales.ServicioAdicionalActionResponseDto, SistemaDeReservas.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "Persons.API.Dtos.Common.ResponseDto\u00601[[SistemaDeReservas.API.Dtos.ServiciosAdicionales.SistemaDeReservas.API.Dtos.ServiciosAdicionales.ServicioAdicionalActionResponseDto, SistemaDeReservas.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -687,7 +771,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Persons.API.Dtos.Common.ResponseDto\u00601[[SistemaDeReservas.API.Dtos.ServiciosAdicionales.ServicioAdicionalActionResponseDto, SistemaDeReservas.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "Persons.API.Dtos.Common.ResponseDto\u00601[[SistemaDeReservas.API.Dtos.ServiciosAdicionales.SistemaDeReservas.API.Dtos.ServiciosAdicionales.ServicioAdicionalActionResponseDto, SistemaDeReservas.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",

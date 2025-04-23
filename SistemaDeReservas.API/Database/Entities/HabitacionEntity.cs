@@ -4,12 +4,12 @@ using System.ComponentModel.DataAnnotations;
 namespace SistemaDeReservas.API.Database.Entities
 {
     [Table("habitaciones")]
-    public class HabitacionEntity 
+    public class HabitacionEntity
     {
         [Key]
-        [Column("habitacion_id")]  
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)] 
-        public int HabitacionId { get; set; }  
+        [Column("habitacion_id")]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int HabitacionId { get; set; }
 
         [Column("hotel_id")]
         [Required]

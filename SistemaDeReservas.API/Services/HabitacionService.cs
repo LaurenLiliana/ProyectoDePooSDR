@@ -23,7 +23,7 @@ namespace SistemaDeReservas.API.Services
         public async Task<ResponseDto<HabitacionActionResponseDtoDos>> GetByIdAsync(int id)
         {
             var habitacion = await _context.Habitaciones
-                .Include(h => h.Hotel) 
+                .Include(h => h.Hotel)
                 .FirstOrDefaultAsync(h => h.HabitacionId == id);
 
             if (habitacion == null)
@@ -42,14 +42,14 @@ namespace SistemaDeReservas.API.Services
                 StatusCode = 200,
                 Status = true,
                 Message = "Habitación obtenida",
-                Data = _mapper.Map<HabitacionActionResponseDtoDos>(habitacion) 
+                Data = _mapper.Map<HabitacionActionResponseDtoDos>(habitacion)
             };
         }
 
         public async Task<ResponseDto<List<HabitacionActionResponseDtoDos>>> GetListAsync()
         {
             var habitaciones = await _context.Habitaciones
-                .Include(h => h.Hotel) 
+                .Include(h => h.Hotel)
                 .ToListAsync();
 
             return new ResponseDto<List<HabitacionActionResponseDtoDos>>
@@ -57,7 +57,7 @@ namespace SistemaDeReservas.API.Services
                 StatusCode = 200,
                 Status = true,
                 Message = "Lista de habitaciones obtenida",
-                Data = _mapper.Map<List<HabitacionActionResponseDtoDos>>(habitaciones) 
+                Data = _mapper.Map<List<HabitacionActionResponseDtoDos>>(habitaciones)
             };
         }
 
@@ -65,7 +65,7 @@ namespace SistemaDeReservas.API.Services
         {
             try
             {
-                
+
                 var hotelExiste = await _context.Hoteles.AnyAsync(h => h.HotelId == dto.HotelId);
                 if (!hotelExiste)
                 {
@@ -132,7 +132,7 @@ namespace SistemaDeReservas.API.Services
                     };
                 }
 
-           
+
                 if (habitacion.Numero != dto.Numero)
                 {
                     var existeNumero = await _context.Habitaciones
@@ -227,5 +227,63 @@ namespace SistemaDeReservas.API.Services
                 };
             }
         }
+
+        // S A M A
+        public async Task<List<HabitacionEntity>> BuscarHabitacionesAsync(BuscarHabitacionesDto filtros, int pagina = 1, int tamaño = 10)
+        {
+            // Empezamos con una consulta básica a las habitaciones
+            var query = _context.Habitaciones.AsQueryable();
+
+            // Filtrar por fechas disponibles
+            if (filtros.FechaInicio != DateTime.MinValue && filtros.FechaFin != DateTime.MinValue)
+            {
+                query = query.Where(h => !_context.Reservas
+                    .Any(r => r.HabitacionId == h.HabitacionId &&
+                              r.FechaInicio.ToDateTime(TimeOnly.MinValue) < filtros.FechaFin &&
+                              r.FechaFin.ToDateTime(TimeOnly.MinValue) > filtros.FechaInicio));
+            }
+
+            // 2. Filtrar por tipo de habitación (opcional)
+            if (!string.IsNullOrEmpty(filtros.Tipo))
+            {
+                query = query.Where(h => h.Tipo == filtros.Tipo);
+            }
+
+            // 3. Filtrar por capacidad (opcional)
+            if (filtros.Capacidad > 0)
+            {
+                query = query.Where(h => h.Capacidad >= filtros.Capacidad);
+            }
+
+            // 4. Filtrar por precio (opcional)
+            if (filtros.PrecioMinimo > 0)
+            {
+                query = query.Where(h => h.PrecioPorNoche >= filtros.PrecioMinimo);
+            }
+
+            if (filtros.PrecioMaximo > 0)
+            {
+                query = query.Where(h => h.PrecioPorNoche <= filtros.PrecioMaximo);
+            }
+
+            // 5. Validación de las fechas
+            if (filtros.FechaInicio > filtros.FechaFin)
+            {
+                throw new ArgumentException("La fecha de inicio no puede ser posterior a la fecha de fin.");
+            }
+
+            // 6. Ordenación por precio (opcional)
+            if (filtros.OrdenarPorPrecio)
+            {
+                query = query.OrderBy(h => h.PrecioPorNoche);  // Orden ascendente por precio
+            }
+
+            // 7. Agregar paginación
+            query = query.Skip((pagina - 1) * tamaño).Take(tamaño);
+
+            // 8. Ejecutamos la consulta asincrónica
+            return await query.ToListAsync();
+        }
+
     }
 }

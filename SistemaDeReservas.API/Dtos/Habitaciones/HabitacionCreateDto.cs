@@ -20,9 +20,9 @@ namespace SistemaDeReservas.API.Dtos.Habitacion
         public int Capacidad { get; set; }
 
         [Required(ErrorMessage = "La disponibilidad es obligatoria")]
-        public bool Disponible { get; set; } 
+        public bool Disponible { get; set; }
 
-        public string Descripción { get; set; } 
+        public string Descripción { get; set; }
 
         [Required(ErrorMessage = "El ID del hotel es obligatorio")]
         public int HotelId { get; set; }

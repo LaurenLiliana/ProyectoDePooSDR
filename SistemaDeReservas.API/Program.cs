@@ -14,6 +14,8 @@ builder.Services.AddDbContext<ApiDbContext>(options =>
 
 builder.Services.AddAutoMapper(typeof(AutoMapperProfiles));
 
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
 builder.Services.AddControllers()
     .AddJsonOptions(options =>
     {
@@ -27,6 +29,9 @@ builder.Services.AddScoped<IClienteService, ClienteService>();
 builder.Services.AddScoped<IReservaService, ReservaService>();
 builder.Services.AddScoped<IServicioAdicionalService, ServicioAdicionalService>();
 builder.Services.AddScoped<IPagoService, PagoService>();
+
+builder.Services.AddScoped<IReservaCanceladaService, ReservaCanceladaService>();
+builder.Services.AddScoped<INotificacionService, NotificacionService>();
 
 
 var app = builder.Build();

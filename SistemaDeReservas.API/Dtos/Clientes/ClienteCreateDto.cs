@@ -13,6 +13,6 @@ public class ClienteCreateDto
     public string Apellido { get; set; }
 
     [Required(ErrorMessage = "El teléfono es obligatorio")]
-    [StringLength(9, ErrorMessage = "Máximo 9 caracteres")]
+    [StringLength(8, ErrorMessage = "Máximo 8 caracteres")]
     public string Telefono { get; set; } 
 }

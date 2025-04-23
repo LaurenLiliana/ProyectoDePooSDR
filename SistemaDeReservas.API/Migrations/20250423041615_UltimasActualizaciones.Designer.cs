@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SistemaDeReservas.API.Database;
 
@@ -10,9 +11,11 @@ using SistemaDeReservas.API.Database;
 namespace SistemaDeReservas.API.Migrations
 {
     [DbContext(typeof(ApiDbContext))]
-    partial class ApiDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250423041615_UltimasActualizaciones")]
+    partial class UltimasActualizaciones
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "9.0.4");
@@ -46,7 +49,7 @@ namespace SistemaDeReservas.API.Migrations
 
                     b.HasKey("ClienteId");
 
-                    b.ToTable("clientes", (string)null);
+                    b.ToTable("clientes");
                 });
 
             modelBuilder.Entity("SistemaDeReservas.API.Database.Entities.HabitacionEntity", b =>
@@ -90,7 +93,7 @@ namespace SistemaDeReservas.API.Migrations
 
                     b.HasIndex("HotelId");
 
-                    b.ToTable("habitaciones", (string)null);
+                    b.ToTable("habitaciones");
                 });
 
             modelBuilder.Entity("SistemaDeReservas.API.Database.Entities.HotelEntity", b =>
@@ -137,7 +140,7 @@ namespace SistemaDeReservas.API.Migrations
 
                     b.HasKey("HotelId");
 
-                    b.ToTable("hoteles", (string)null);
+                    b.ToTable("hoteles");
                 });
 
             modelBuilder.Entity("SistemaDeReservas.API.Database.Entities.NotificacionEntity", b =>
@@ -168,7 +171,7 @@ namespace SistemaDeReservas.API.Migrations
 
                     b.HasKey("NotificacionId");
 
-                    b.ToTable("notificaciones", (string)null);
+                    b.ToTable("notificaciones");
                 });
 
             modelBuilder.Entity("SistemaDeReservas.API.Database.Entities.PagoEntity", b =>
@@ -199,7 +202,7 @@ namespace SistemaDeReservas.API.Migrations
 
                     b.HasIndex("ReservaEntityReservaId");
 
-                    b.ToTable("pagos", (string)null);
+                    b.ToTable("pagos");
                 });
 
             modelBuilder.Entity("SistemaDeReservas.API.Database.Entities.ReservaCanceladaEntity", b =>
@@ -235,7 +238,7 @@ namespace SistemaDeReservas.API.Migrations
 
                     b.HasIndex("HabitacionId");
 
-                    b.ToTable("ReservasCanceladas", (string)null);
+                    b.ToTable("ReservasCanceladas");
                 });
 
             modelBuilder.Entity("SistemaDeReservas.API.Database.Entities.ReservaEntity", b =>
@@ -276,7 +279,7 @@ namespace SistemaDeReservas.API.Migrations
 
                     b.HasIndex("HabitacionId");
 
-                    b.ToTable("reservas", (string)null);
+                    b.ToTable("reservas");
                 });
 
             modelBuilder.Entity("SistemaDeReservas.API.Database.Entities.ServicioAdicionalEntity", b =>
@@ -310,7 +313,7 @@ namespace SistemaDeReservas.API.Migrations
 
                     b.HasIndex("ReservaEntityReservaId");
 
-                    b.ToTable("servicio_adicional", (string)null);
+                    b.ToTable("servicio_adicional");
                 });
 
             modelBuilder.Entity("SistemaDeReservas.API.Database.Entities.HabitacionEntity", b =>

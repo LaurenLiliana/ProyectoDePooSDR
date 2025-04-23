@@ -22,7 +22,7 @@ namespace SistemaDeReservas.API.Services
             _mapper = mapper;
         }
 
-       
+
         public async Task<ResponseDto<ReservaActionResponseDto>> GetByIdAsync(int id)
         {
             var reserva = await _context.Reservas

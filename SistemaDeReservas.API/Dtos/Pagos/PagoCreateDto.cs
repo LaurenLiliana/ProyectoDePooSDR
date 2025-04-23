@@ -14,7 +14,7 @@ namespace SistemaDeReservas.API.Dtos.Pagos
 
         [Required(ErrorMessage = "La fecha de pago es obligatoria")]
         [DataType(DataType.Date)]
-        public DateOnly FechaPago { get; set; } 
+        public DateOnly FechaPago { get; set; }
 
         [Required(ErrorMessage = "El estado es obligatorio")]
         [StringLength(15, ErrorMessage = "Máximo 15 caracteres")]

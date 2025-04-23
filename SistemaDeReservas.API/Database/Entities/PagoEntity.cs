@@ -27,8 +27,8 @@ namespace SistemaDeReservas.API.Database.Entities
         [Required]
         public string Estado { get; set; }
 
+        //// Definir la relación de clave externa con Reserva
         //[ForeignKey(nameof(ReservaId))]
         //public ReservaEntity Reserva { get; set; }
     }
-
 }

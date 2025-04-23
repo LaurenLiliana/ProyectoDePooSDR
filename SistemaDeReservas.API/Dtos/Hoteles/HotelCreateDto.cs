@@ -36,6 +36,6 @@ namespace SistemaDeReservas.API.Dtos.Hotel
 
         [Display(Name = "Email")]
         [EmailAddress(ErrorMessage = "Formato de email inválido")]
-        public string Email { get; set; }  
+        public string Email { get; set; }
     }
 }

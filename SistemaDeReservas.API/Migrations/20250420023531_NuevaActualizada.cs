@@ -8,13 +8,13 @@ namespace SistemaDeReservas.API.Migrations
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropForeignKey(
-                name: "FK_pagos_reservas_ReservaEntityReservaId",
-                table: "pagos");
+            //migrationBuilder.DropForeignKey(
+            //    name: "FK_pagos_reservas_ReservaEntityReservaId",
+            //    table: "pagos");
 
-            migrationBuilder.DropIndex(
-                name: "IX_pagos_ReservaEntityReservaId",
-                table: "pagos");
+            ////migrationBuilder.DropIndex(
+            ////    name: "IX_pagos_ReservaEntityReservaId",
+            ////    table: "pagos");
 
             migrationBuilder.DropColumn(
                 name: "ReservaEntityReservaId",
@@ -51,10 +51,10 @@ namespace SistemaDeReservas.API.Migrations
                 type: "INTEGER",
                 nullable: true);
 
-            migrationBuilder.CreateIndex(
-                name: "IX_pagos_ReservaEntityReservaId",
-                table: "pagos",
-                column: "ReservaEntityReservaId");
+            //migrationBuilder.CreateIndex(
+            //    name: "IX_pagos_ReservaEntityReservaId",
+            //    table: "pagos",
+            //    column: "ReservaEntityReservaId");
 
             migrationBuilder.AddForeignKey(
                 name: "FK_pagos_reservas_ReservaEntityReservaId",

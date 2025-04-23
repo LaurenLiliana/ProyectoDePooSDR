@@ -1,7 +1,8 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace SistemaDeReservas.API.Dtos.Reservas { 
+namespace SistemaDeReservas.API.Dtos.Reservas
+{
     public class ReservaCreateDto
     {
         [Required(ErrorMessage = "El ID del cliente es obligatorio")]
@@ -11,7 +12,7 @@ namespace SistemaDeReservas.API.Dtos.Reservas {
         public int HabitacionId { get; set; }
 
         [Required(ErrorMessage = "La fecha de inicio es obligatoria")]
-        [DataType(DataType.Date)]  
+        [DataType(DataType.Date)]
         public DateOnly FechaInicio { get; set; }
 
         [Required(ErrorMessage = "La fecha de fin es obligatoria")]

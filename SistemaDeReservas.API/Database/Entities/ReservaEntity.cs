@@ -40,8 +40,8 @@ namespace SistemaDeReservas.API.Database.Entities
 
         [ForeignKey(nameof(HabitacionId))]
         public virtual HabitacionEntity Habitacion { get; set; }
-        //public virtual List<PagoEntity> Pagos { get; set; }
-        //public virtual List<ServicioAdicionalEntity> ServiciosAdicionales { get; set; }
+        public virtual List<PagoEntity> Pagos { get; set; }
+        public virtual List<ServicioAdicionalEntity> ServiciosAdicionales { get; set; }
 
     }
 

@@ -57,5 +57,26 @@ namespace SistemaDeReservas.API.Controllers
             var response = await _habitacionService.DeleteAsync(id);
             return StatusCode(response.StatusCode, response);
         }
+
+        // S A M A
+        //[HttpPost("buscar")]
+        //public async Task<ActionResult<List<HabitacionDto>>> BuscarHabitaciones([FromBody] BuscarHabitacionesDto filtros)
+        //{
+        //    var habitaciones = await _habitacionService.BuscarHabitacionesAsync(filtros);
+        //    return Ok(habitaciones);
+        //}
+        [HttpPost("buscar")]
+        public async Task<ActionResult<List<HabitacionDto>>> BuscarHabitaciones([FromBody] BuscarHabitacionesDto filtros)
+        {
+            var habitaciones = await _habitacionService.BuscarHabitacionesAsync(filtros);
+
+            if (habitaciones == null || !habitaciones.Any())
+            {
+                return NotFound(new { mensaje = "No hay habitaciones disponibles que coincidan con los filtros." });
+            }
+
+            return Ok(habitaciones);
+        }
+
     }
 }

@@ -2,6 +2,7 @@
 using SistemaDeReservas.API.Dtos.ServiciosAdicionales;
 using SistemaDeReservas.API.Services.Interfaces;
 using Persons.API.Dtos.Common;
+using SistemaDeReservas.API.Dtos.ServiciosAdicionales.SistemaDeReservas.API.Dtos.ServiciosAdicionales;
 
 namespace SistemaDeReservas.API.Controllers
 {

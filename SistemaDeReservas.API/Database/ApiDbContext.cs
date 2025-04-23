@@ -14,5 +14,8 @@ namespace SistemaDeReservas.API.Database
         public DbSet<ReservaEntity> Reservas { get; set; }
         public DbSet<PagoEntity> Pagos { get; set; }
         public DbSet<ServicioAdicionalEntity> ServiciosAdicionales { get; set; }
+
+        public DbSet<ReservaCanceladaEntity> ReservasCanceladas { get; set; }
+        public DbSet<NotificacionEntity> Notificaciones { get; set; }
     }
 }

@@ -1,8 +1,11 @@
 ﻿namespace SistemaDeReservas.API.Dtos.ServiciosAdicionales
 {
-    public class ServicioAdicionalActionResponseDto
+    namespace SistemaDeReservas.API.Dtos.ServiciosAdicionales
     {
-        public string Nombre { get; set; }
-        public bool Precio { get; set; }
+        public class ServicioAdicionalActionResponseDto
+        {
+            public string Nombre { get; set; }
+            public bool Precio { get; set; }
+        }
     }
 }

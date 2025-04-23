@@ -12,6 +12,6 @@ namespace SistemaDeReservas.API.Services.Interfaces
         Task<ResponseDto<HotelActionResponseDto>> CreateAsync(HotelCreateDto dto);
         Task<ResponseDto<HotelActionResponseDto>> EditAsync(int id, HotelEditDto dto);
         Task<ResponseDto<bool>> DeleteAsync(int id);
-        
+
     }
 }

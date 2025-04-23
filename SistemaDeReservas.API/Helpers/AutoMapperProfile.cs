@@ -8,6 +8,7 @@ using SistemaDeReservas.API.Dtos.Hotel;
 using SistemaDeReservas.API.Dtos.Pagos;
 using SistemaDeReservas.API.Dtos.Reservas;
 using SistemaDeReservas.API.Dtos.ServiciosAdicionales;
+using SistemaDeReservas.API.Dtos.ServiciosAdicionales.SistemaDeReservas.API.Dtos.ServiciosAdicionales;
 
 namespace SistemaDeReservas.API.Helpers
 {
@@ -51,9 +52,26 @@ namespace SistemaDeReservas.API.Helpers
             CreateMap<PagoEditDto, PagoEntity>();
 
             CreateMap<ServicioAdicionalEntity, ServicioAdicionalDto>();
-            CreateMap<ServicioAdicionalEntity, Dtos.ServiciosAdicionales.ServicioAdicionalActionResponseDto>();
+            CreateMap<ServicioAdicionalEntity, ServicioAdicionalActionResponseDto>();
             CreateMap<ServicioAdicionalCreateDto, ServicioAdicionalEntity>();
             CreateMap<ServicioAdicionalEditDto, ServicioAdicionalEntity>();
+
+            //Sama
+            //// Mapeo de ReservaEntity a ReservaDto
+            //CreateMap<ReservaEntity, ReservaDto>();
+            //// Mapeo de ReservaCanceladaEntity a ReservaCanceladaDto
+            //CreateMap<ReservaCanceladaEntity, ReservaCanceladaDto>();
+            CreateMap<ReservaCanceladaEntity, ReservaCanceladaDto>();
+            //CreateMap<ReservaEntity, ReservaCanceladaEntity>();
+
+            //CreateMap<ReservaEntity, ReservaCanceladaEntity>()
+            //   .ForMember(dest => dest.Estado, opt => opt.MapFrom(src => "Cancelada"));
+            // Configuración para convertir DateOnly a DateTime
+
+            CreateMap<ReservaEntity, ReservaCanceladaEntity>()
+                .ForMember(dest => dest.FechaInicio, opt => opt.MapFrom(src => src.FechaInicio.ToDateTime(TimeOnly.MinValue)))
+                .ForMember(dest => dest.FechaFin, opt => opt.MapFrom(src => src.FechaFin.ToDateTime(TimeOnly.MinValue)))
+                .ForMember(dest => dest.Estado, opt => opt.MapFrom(src => "Cancelada"));
         }
     }
 }

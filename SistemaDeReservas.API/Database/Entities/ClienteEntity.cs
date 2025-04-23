@@ -4,12 +4,12 @@ using System.ComponentModel.DataAnnotations;
 namespace SistemaDeReservas.API.Database.Entities
 {
     [Table("clientes")]
-    public class ClienteEntity 
+    public class ClienteEntity
     {
-        [Key] 
-        [Column("cliente_id")] 
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)] 
-        public int ClienteId { get; set; } 
+        [Key]
+        [Column("cliente_id")]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int ClienteId { get; set; }
 
         [Column("documento_id")]
         [Required]
